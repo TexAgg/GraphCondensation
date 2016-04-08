@@ -30,7 +30,7 @@ class Edge {
 template <typename T>
 class Graph {
 
-}
+};
 
 
 } // End matt namespace
