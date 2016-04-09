@@ -9,23 +9,26 @@
 using namespace std;
 
 int main(int argc, char ** argv) {
-	
-	//ifstream infile;
-	
-	cout << "Hello, world." << endl;
+	if (argc < 2) {
+		// Insufficient arguments
+		cout << "Usage: ./main + <filename>";
+		return 1;
+	}
+
+	ifstream infile;
 	
 	/*
+	cout << "Hello, world." << endl;
 	for (int i = 0; i < argc; i++) {
 		cout << string(argv[i]) << endl;
 	}
 	*/
-	//cout << argv[1];
 
-	/*
+	infile.open(argv[1]);
 	if (!infile) {
-		cout << "Error!" << endl;
+		cout << "Error! file does not exist" << endl;
+		return 1;
 	}
-	*/
 
 	return 0;
 }
