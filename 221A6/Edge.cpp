@@ -1,5 +1,7 @@
 /*
 	Edge.cpp
+	Matt Gaikema
+	CSCE 221: 504
 */
 
 #include "Edge.h"

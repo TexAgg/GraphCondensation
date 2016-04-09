@@ -1,5 +1,7 @@
 /*
 	Vertex.h
+	Matt Gaikema
+	CSCE 221: 504
 */
 
 #ifndef VERTEX_H

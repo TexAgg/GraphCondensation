@@ -1,5 +1,7 @@
 /*
 	Graph.h
+	Matt Gaikema
+	CSCE 221: 504
 */
 
 #ifndef GRAPH_H
@@ -20,6 +22,7 @@ public:
 
 	void build_graph();
 
+private:
 	std::vector<Vertex> vertices;
 };
 

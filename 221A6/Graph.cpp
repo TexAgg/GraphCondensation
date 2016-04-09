@@ -1,5 +1,7 @@
 /*
 	Graph.cpp
+	Matt Gaikema
+	CSCE 221: 504
 */
 
 #include "Graph.h"

@@ -1,5 +1,7 @@
 /*
 	Main.cpp
+	Matt Gaikema
+	CSCE 221: 504
 */
 
 #include <iostream>
@@ -8,6 +10,12 @@
 
 using namespace std;
 
+/// <summary>
+/// Reads in the filename parameter and prints out a graph
+/// </summary>
+/// <param name="argc">The number of args.</param>
+/// <param name="argv">Each command line arg.</param>
+/// <returns>int.</returns>
 int main(int argc, char ** argv) {
 	if (argc < 2) {
 		// Insufficient arguments

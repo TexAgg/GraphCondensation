@@ -1,5 +1,7 @@
 /*
 	Edge.h
+	Matt Gaikema
+	CSCE 221: 504
 */
 
 #ifndef EDGE_H
