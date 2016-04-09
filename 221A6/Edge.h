@@ -3,8 +3,13 @@
 
 namespace matt {
 
-class Edge
-{
+class Edge {
+
+public:
+	Edge(int start, int end, int weight);
+	~Edge();
+
+private:
 	// Start vertex's label
 	int start;
 	// End vertex's label
@@ -12,11 +17,8 @@ class Edge
 	// Weight of the edge
 	int weight;
 
-public:
-	Edge(int start, int end, int weight);
-	~Edge();
-
 	friend class Vertex;
+	friend class Graph;
 };
 
 } // End matt namespace

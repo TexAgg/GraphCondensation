@@ -2,13 +2,11 @@
 
 namespace matt {
 
-Vertex::Vertex(int l) : label(l)
-{
+Vertex::Vertex(int l) : label(l) {
 }
 
 
-Vertex::~Vertex()
-{
+Vertex::~Vertex() {
 }
 
 }

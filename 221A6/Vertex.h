@@ -9,12 +9,7 @@
 
 namespace matt {
 
-class Vertex
-{
-	// Label of this vertex
-	int label;
-	// Linked list to manage edges
-	std::list<Edge> edge_list;
+class Vertex {
 
 public:
 	Vertex(int l);
@@ -23,7 +18,14 @@ public:
 	// Connect this vertex to a specific vertex
 	void connect_to(int end);
 
+private:
+	// Label of this vertex
+	int label;
+	// Linked list to manage edges
+	std::list<Edge> edge_list;
+
 	friend class Edge;
+	friend class Graph;
 };
 
 } // End matt namespace

@@ -1,14 +1,16 @@
 #include "Graph.h"
 
-namespace matt{
+namespace matt {
 
-Graph::Graph()
-{
+Graph::Graph(int size) {
 }
 
 
-Graph::~Graph()
-{
+Graph::~Graph() {
+}
+
+void Graph::build_graph() {
+
 }
 
 } // End matt namespace

@@ -2,13 +2,11 @@
 
 namespace matt {
 
-Edge::Edge(int start, int end, int weight)
-{
+Edge::Edge(int start, int end, int weight) {
 }
 
 
-Edge::~Edge()
-{
+Edge::~Edge() {
 }
 
 } // End matt namespace
