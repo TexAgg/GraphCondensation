@@ -10,13 +10,16 @@ using namespace std;
 
 int main(int argc, char ** argv) {
 	
-	ifstream infile;
+	//ifstream infile;
 	
 	cout << "Hello, world." << endl;
 	
+	/*
 	for (int i = 0; i < argc; i++) {
 		cout << string(argv[i]) << endl;
 	}
+	*/
+	//cout << argv[1];
 
 	/*
 	if (!infile) {
