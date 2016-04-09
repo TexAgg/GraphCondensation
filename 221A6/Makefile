@@ -16,5 +16,8 @@ Vertex.o: Vertex.cpp Vertex.h
 Edge.o: Edge.cpp Edge.h
 	g++ -std=c++11 -c Edge.cpp
 
+run:
+	./Main
+
 clean: 
 	rm -f $(OBJ) $(MAIN)

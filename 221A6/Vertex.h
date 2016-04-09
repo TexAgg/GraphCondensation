@@ -11,6 +11,8 @@ namespace matt {
 
 class Vertex {
 
+//------------------------------------------------------------------------------
+
 public:
 	Vertex(int l);
 	~Vertex();
@@ -28,6 +30,8 @@ private:
 	friend class Graph;
 };
 
+//------------------------------------------------------------------------------
+
 } // End matt namespace
 
-#endif
+#endif // VERTEX_H

@@ -7,6 +7,8 @@
 
 namespace matt {
 
+//------------------------------------------------------------------------------
+
 class Graph {
 public:
 	Graph(int size);
@@ -17,6 +19,8 @@ public:
 	std::vector<Vertex> vertices;
 };
 
+//------------------------------------------------------------------------------
+
 } // End matt namespace
 
-#endif
+#endif // GRAPH_H
