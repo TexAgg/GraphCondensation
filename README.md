@@ -14,6 +14,7 @@ To add command line parameters, go to 'project->221A6 properties' and, in the wi
 go to the 'debugging' tab and enter the text file.
 
 ## Linux
+In the root, go to the folder '221A6'.
 Type `make` to compile the program.
 Type `make test` to run with the command line argument 'input.txt',
 or type	`./Main <filename>` to run it with your own file.
