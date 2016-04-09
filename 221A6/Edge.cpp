@@ -2,7 +2,7 @@
 
 namespace matt {
 
-Edge::Edge()
+Edge::Edge(int start, int end, int weight)
 {
 }
 

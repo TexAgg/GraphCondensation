@@ -2,7 +2,7 @@
 
 namespace matt {
 
-Vertex::Vertex()
+Vertex::Vertex(int l) : label(l)
 {
 }
 
