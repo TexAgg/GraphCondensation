@@ -1,3 +1,7 @@
+/*
+	Edge.cpp
+*/
+
 #include "Edge.h"
 
 namespace matt {
