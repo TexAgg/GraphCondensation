@@ -15,6 +15,10 @@ namespace matt {
 
 //------------------------------------------------------------------------------
 
+/*
+	The Graph class is a collection of Vertices
+	with functions to access them.
+*/
 class Graph {
 public:
 	Graph(int size);

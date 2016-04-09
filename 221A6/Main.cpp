@@ -10,12 +10,10 @@
 
 using namespace std;
 
-/// <summary>
-/// Reads in the filename parameter and prints out a graph
-/// </summary>
-/// <param name="argc">The number of args.</param>
-/// <param name="argv">Each command line arg.</param>
-/// <returns>int.</returns>
+/*
+	The command line argument should be 
+	a filename with the graph data.
+*/
 int main(int argc, char ** argv) {
 	if (argc < 2) {
 		// Insufficient arguments

@@ -15,9 +15,9 @@
 
 namespace matt {
 
-class Vertex {
-
 //------------------------------------------------------------------------------
+
+class Vertex {
 
 public:
 	Vertex(int l);

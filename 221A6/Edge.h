@@ -14,7 +14,7 @@ namespace matt {
 class Edge {
 
 public:
-	Edge(int start, int end, int weight);
+	Edge(int start, int end, int weight = 0);
 	~Edge();
 
 private:
