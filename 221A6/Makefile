@@ -1,10 +1,10 @@
-OBJ = main.o Graph.o Vertex.o Edge.o
-MAIN = main
+OBJ = Main.o Graph.o Vertex.o Edge.o
+MAIN = Main
 
 $(MAIN): $(OBJ)
 	g++ -std=c++11 -o $(MAIN) $(OBJ)
 
-main.o: Main.cpp
+Main.o: Main.cpp
 	g++ -std=c++11 -c Main.cpp
 
 Graph.o: Graph.cpp Graph.h
