@@ -8,18 +8,21 @@
 
 using namespace std;
 
-int main(int argc, const char * argv[]) {
+int main(int argc, char ** argv) {
 	
 	ifstream infile;
 	
 	cout << "Hello, world." << endl;
-	cout << *argv[1] << endl;
+	
+	for (int i = 0; i < argc; i++) {
+		cout << string(argv[i]) << endl;
+	}
 
-	infile.open(argv[1]);
-
+	/*
 	if (!infile) {
 		cout << "Error!" << endl;
 	}
+	*/
 
 	return 0;
 }
