@@ -1,21 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="matt::Edge" Collapsed="true">
-    <Position X="2.5" Y="1.75" Width="1.5" />
+  <Comment CommentText="A Graph is a list of Vertices, and a Vertex is a list of Edges">
+    <Position X="3.55" Y="0.817" Height="0.75" Width="4.917" />
+  </Comment>
+  <Class Name="matt::Edge">
+    <Position X="7" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAgAAAAAAAAAAAABAAgAAAgAAAAAAA=</HashCode>
       <FileName>Edge.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="matt::Graph" Collapsed="true">
-    <Position X="3.5" Y="1" Width="1.5" />
+  <Class Name="matt::Graph">
+    <Position X="3.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAQAAgAAAAAQAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAQAAgAAAAAQAAAAAE=</HashCode>
       <FileName>Graph.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="matt::Vertex" Collapsed="true">
-    <Position X="4.25" Y="1.75" Width="1.5" />
+  <Class Name="matt::Vertex">
+    <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABIBAAAAAAAAAQAAAAAAAACAAAAAAAAAA=</HashCode>
       <FileName>Vertex.h</FileName>

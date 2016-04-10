@@ -17,6 +17,10 @@ namespace matt {
 
 //------------------------------------------------------------------------------
 
+/*
+	A Vertex has a list of edges that connect to it, 
+	and a label;
+*/
 class Vertex {
 
 public:

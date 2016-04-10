@@ -11,6 +11,11 @@ namespace matt {
 
 //------------------------------------------------------------------------------
 
+/*
+	An Edge is a connection between two Vertices.
+	Since this graph is a directed graph,
+	the Edges have direction.
+*/
 class Edge {
 
 public:
