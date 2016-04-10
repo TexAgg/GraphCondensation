@@ -21,10 +21,12 @@ namespace matt {
 */
 class Graph {
 public:
+	Graph();
 	Graph(int size);
 	~Graph();
 
 	void build_graph();
+	void display_graph();
 
 private:
 	std::vector<Vertex> vertices;

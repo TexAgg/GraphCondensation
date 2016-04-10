@@ -31,6 +31,7 @@
   <ItemGroup>
     <None Include="..\README.md" />
     <None Include="Makefile" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Edge.h">

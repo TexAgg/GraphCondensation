@@ -15,10 +15,16 @@ namespace matt {
 	@param an int, to be set as the label.
 */
 Vertex::Vertex(int l) : label(l) {
+
 }
 
 
 Vertex::~Vertex() {
+
+}
+
+void Vertex::connect_to(int end) {
+
 }
 
 } // End matt namespace

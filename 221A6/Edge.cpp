@@ -16,11 +16,13 @@ namespace matt {
 	@param end The label for the second Vertex.
 	@param weight The weight of the Edge.
 */
-Edge::Edge(int start, int end, int weight = 0) {
+Edge::Edge(int start, int end, int weight) {
+
 }
 
 
 Edge::~Edge() {
+
 }
 
 } // End matt namespace
