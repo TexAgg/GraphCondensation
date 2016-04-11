@@ -18,7 +18,11 @@ Graph::Graph(int size) {
 
 /**
 	This constructor constructs a Graph from
-	a file.
+	a file. Data must be formatted such that
+	the file contains just one graph,
+	with the edge lists on each line, 
+	and a -1 indicating the end of
+	an edge list.
 	@param The name of file to be read from.
 */
 Graph::Graph(std::string filename) {
@@ -38,12 +42,14 @@ Graph::Graph(std::string filename) {
 				ss >> e;
 				line.push_back(e);
 			}
-			for (int i = 0; i < line.size(); i++) {
+			for (int i = 0; i < line.size() - 1; i++) {
 				if (line[i + 1] == -1) break;
 				vertex.edge_list.emplace_back(line[i], line[i + 1]);
 			}
 			vertices.push_back(vertex);
 		}
+		// Last element is garbage.
+		vertices.pop_back();
 	}
 	catch (std::ifstream::failure e) {
 		std::cerr << "Exception ocurred opening/closing/reading file." << std::endl;
@@ -60,22 +66,6 @@ void Graph::build_graph() {
 
 void Graph::display_graph(std::ostream& os) {
 
-}
-
-/**
-	The input operator for a Graph,
-	intended to read data from a file.
-	Data must be formatted such that
-	the file contains just one graph,
-	with the edge lists on each line, 
-	and a -1 indicating the end of
-	an edge list.
-*/
-std::istream& operator>>(std::istream& is, Graph graph) {
-	
-	// Do stuff
-	
-	return is;
 }
 
 } // End matt namespace

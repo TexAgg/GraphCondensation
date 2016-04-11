@@ -22,18 +22,6 @@ int main(int argc, char ** argv) {
 	}
 	
 	matt::Graph graph(argv[1]);
-	/*
-	ifstream infile;
-	infile.open(argv[1]);
-	if (!infile) {
-		cout << "Error! file does not exist" << endl;
-		return 1;
-	}
-	while (infile) {
-		string str;
-		getline(infile, str);
-	}
-	*/
 
 	return 0;
 }

@@ -38,8 +38,6 @@ public:
 
 //------------------------------------------------------------------------------
 
-std::istream& operator>>(std::istream is, Graph graph);
-
 } // End matt namespace
 
 #endif // GRAPH_H

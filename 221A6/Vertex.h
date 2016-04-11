@@ -38,7 +38,6 @@ public:
 	// Fill the edge_list from a string.
 	void parse_list(std::string str);
 
-	friend std::istream& operator>>(std::istream& is, Vertex);
 	friend class Edge;
 	friend class Graph;
 };
