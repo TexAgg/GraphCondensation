@@ -19,21 +19,23 @@ namespace matt {
 
 /*
 	A Vertex has a list of edges that connect to it, 
-	and a label;
+	and a label.
 */
 class Vertex {
 
-	// Label of this vertex
+	// Label of this vertex.
 	int label;
-	// Linked list to manage edges
+	// Linked list to manage edges.
 	std::list<Edge> edge_list;
 
 public:
 	Vertex(int l);
 	~Vertex();
 
-	// Connect this vertex to a specific vertex
+	// Connect this vertex to a specific vertex.
 	void connect_to(int end);
+	// Fill the edge_list from a string.
+	void parse_list(std::string str);
 
 	friend std::istream& operator>>(std::istream& is, Vertex);
 	friend class Edge;
