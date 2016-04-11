@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <vector>
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include "Vertex.h"
 
 namespace matt {
@@ -25,6 +27,7 @@ class Graph {
 public:
 	Graph();
 	Graph(int size);
+	Graph(std::string filename);
 	~Graph();
 
 	void build_graph();
