@@ -30,13 +30,19 @@ Graph::Graph(std::string filename) {
 			std::getline(infile, str);
 			std::stringstream ss(str);
 
-			Vertex vertex((int)ss.peek());
-			vertices.push_back(vertex);
-
+			Vertex vertex(int(ss.peek()-'0'));
+			//vertices.push_back(vertex);
+			std::vector<int> line;
 			while (ss) {
 				int e;
 				ss >> e;
+				line.push_back(e);
 			}
+			for (int i = 0; i < line.size(); i++) {
+				if (line[i + 1] == -1) break;
+				vertex.edge_list.emplace_back(line[i], line[i + 1]);
+			}
+			vertices.push_back(vertex);
 		}
 	}
 	catch (std::ifstream::failure e) {

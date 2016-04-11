@@ -21,9 +21,9 @@ int main(int argc, char ** argv) {
 		return 1;
 	}
 	
-	matt::Graph graph;
+	matt::Graph graph(argv[1]);
+	/*
 	ifstream infile;
-
 	infile.open(argv[1]);
 	if (!infile) {
 		cout << "Error! file does not exist" << endl;
@@ -33,6 +33,7 @@ int main(int argc, char ** argv) {
 		string str;
 		getline(infile, str);
 	}
+	*/
 
 	return 0;
 }
