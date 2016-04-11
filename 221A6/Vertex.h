@@ -23,18 +23,17 @@ namespace matt {
 */
 class Vertex {
 
+	// Label of this vertex
+	int label;
+	// Linked list to manage edges
+	std::list<Edge> edge_list;
+
 public:
 	Vertex(int l);
 	~Vertex();
 
 	// Connect this vertex to a specific vertex
 	void connect_to(int end);
-
-private:
-	// Label of this vertex
-	int label;
-	// Linked list to manage edges
-	std::list<Edge> edge_list;
 
 	friend class Edge;
 	friend class Graph;

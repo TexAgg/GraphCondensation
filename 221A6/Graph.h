@@ -20,6 +20,9 @@ namespace matt {
 	with functions to access them.
 */
 class Graph {
+
+	std::vector<Vertex> vertices;
+
 public:
 	Graph();
 	Graph(int size);
@@ -28,8 +31,7 @@ public:
 	void build_graph();
 	void display_graph();
 
-private:
-	std::vector<Vertex> vertices;
+	friend std::istream& operator>>(std::istream is, Graph graph);
 };
 
 //------------------------------------------------------------------------------
