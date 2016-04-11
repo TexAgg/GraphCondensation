@@ -28,7 +28,10 @@ void Vertex::connect_to(int end) {
 }
 
 void Vertex::parse_list(std::string str) {
-	std::stringstream stringstrup(str);
+	std::stringstream ss(str);
+	while (ss) {
+		//edge_list.emplace_back()
+	}
 }
 
 std::istream& operator>>(std::istream& is, Vertex) {
