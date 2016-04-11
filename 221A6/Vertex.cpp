@@ -27,6 +27,10 @@ void Vertex::connect_to(int end) {
 
 }
 
+void Vertex::parse_list(std::string str) {
+	std::stringstream stringstrup(str);
+}
+
 std::istream& operator>>(std::istream& is, Vertex) {
 
 }

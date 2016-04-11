@@ -11,6 +11,7 @@
 #include <list>
 #include <string>
 #include <vector>
+#include <sstream>
 #include "Edge.h"
 
 namespace matt {
