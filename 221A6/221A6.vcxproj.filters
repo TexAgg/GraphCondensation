@@ -48,6 +48,6 @@
     <Text Include="input.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="planning.txt" />
+    <Text Include="planning.md" />
   </ItemGroup>
 </Project>
