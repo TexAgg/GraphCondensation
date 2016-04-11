@@ -35,7 +35,8 @@ void Vertex::parse_list(std::string str) {
 }
 
 std::istream& operator>>(std::istream& is, Vertex) {
-
+	// Do stuff
+	return is;
 }
 
 } // End matt namespace

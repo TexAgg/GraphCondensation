@@ -8,6 +8,10 @@
 
 namespace matt {
 
+Graph::Graph() {
+
+}
+
 Graph::Graph(int size) {
 
 }
