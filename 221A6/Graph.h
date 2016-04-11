@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <vector>
+#include <iostream>
 #include "Vertex.h"
 
 namespace matt {
@@ -21,20 +22,20 @@ namespace matt {
 */
 class Graph {
 
-	std::vector<Vertex> vertices;
-
 public:
 	Graph();
 	Graph(int size);
 	~Graph();
 
 	void build_graph();
-	void display_graph();
+	void display_graph(std::ostream& os = std::cout);
 
-	friend std::istream& operator>>(std::istream is, Graph graph);
+	std::vector<Vertex> vertices;
 };
 
 //------------------------------------------------------------------------------
+
+std::istream& operator>>(std::istream is, Graph graph);
 
 } // End matt namespace
 

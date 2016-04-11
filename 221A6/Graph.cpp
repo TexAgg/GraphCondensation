@@ -21,7 +21,7 @@ void Graph::build_graph() {
 
 }
 
-void Graph::display_graph() {
+void Graph::display_graph(std::ostream& os) {
 
 }
 

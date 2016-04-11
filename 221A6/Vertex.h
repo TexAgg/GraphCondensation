@@ -35,6 +35,7 @@ public:
 	// Connect this vertex to a specific vertex
 	void connect_to(int end);
 
+	friend std::istream& operator>>(std::istream& is, Vertex);
 	friend class Edge;
 	friend class Graph;
 };

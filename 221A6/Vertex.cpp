@@ -27,4 +27,8 @@ void Vertex::connect_to(int end) {
 
 }
 
+std::istream& operator>>(std::istream& is, Vertex) {
+
+}
+
 } // End matt namespace
