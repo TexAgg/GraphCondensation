@@ -13,7 +13,7 @@ Graph::Graph() {
 }
 
 Graph::Graph(int size) {
-
+	// I have no idea what this constructor is meant to do.
 }
 
 /**
@@ -23,7 +23,7 @@ Graph::Graph(int size) {
 	with the edge lists on each line, 
 	and a -1 indicating the end of
 	an edge list.
-	@param The name of file to be read from.
+	@param filename The name of file to be read from.
 */
 Graph::Graph(std::string filename) {
 	try {
@@ -64,11 +64,20 @@ void Graph::build_graph() {
 
 }
 
+/**
+	Display the graph.
+	Example output (from input.txt):
+	1: 2 4 5 -1
+	2: 3 4 7 -1
+	3: 4 -1
+	4: 6 7 -1
+	5: 4 -1
+	6: 5 -1
+	7: 6 -1
+	@param os the output stream to
+	display the Graph.
+*/
 void Graph::display_graph(std::ostream& os) {
-	/*
-	for k in vertices:
-		os << print edges (k)
-	*/
 	for (auto k : vertices) {
 		k.print_edges(os);
 	}
