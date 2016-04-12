@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <iostream>
 #include "Edge.h"
 
 namespace matt {
@@ -24,6 +25,8 @@ namespace matt {
 */
 class Vertex {
 
+	void print_edges(std::ostream& os = std::cout);
+	
 	// Label of this vertex.
 	int label;
 	// Linked list to manage edges.

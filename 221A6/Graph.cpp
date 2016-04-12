@@ -65,7 +65,13 @@ void Graph::build_graph() {
 }
 
 void Graph::display_graph(std::ostream& os) {
-
+	/*
+	for k in vertices:
+		os << print edges (k)
+	*/
+	for (auto k : vertices) {
+		k.print_edges(os);
+	}
 }
 
 } // End matt namespace

@@ -27,4 +27,14 @@ void Vertex::connect_to(int end) {
 
 }
 
+void Vertex::print_edges(std::ostream& os) {
+	std::list<Edge> temp_list = edge_list;
+	os << label << ": ";
+	while (!temp_list.empty()) {
+		os << temp_list.front() << "->";
+		temp_list.pop_front();
+	}
+	os << std::endl;
+}
+
 } // End matt namespace

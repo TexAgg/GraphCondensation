@@ -22,6 +22,7 @@ int main(int argc, char ** argv) {
 	}
 	
 	matt::Graph graph(argv[1]);
+	graph.display_graph();
 
 	return 0;
 }

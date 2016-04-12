@@ -7,6 +7,8 @@
 #ifndef EDGE_H
 #define EDGE_H
 
+#include <iostream>
+
 namespace matt {
 
 //------------------------------------------------------------------------------
@@ -28,6 +30,8 @@ class Edge {
 public:
 	Edge(int start, int end, int weight = 0);
 	~Edge();
+
+	friend std::ostream& operator<<(std::ostream& os, Edge& edge);
 
 	friend class Vertex;
 	friend class Graph;

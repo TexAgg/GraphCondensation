@@ -28,4 +28,9 @@ Edge::~Edge() {
 
 }
 
+std::ostream& operator<<(std::ostream& os, Edge& edge) {
+	os << edge.start << "->" << edge.end;
+	return os;
+}
+
 } // End matt namespace
