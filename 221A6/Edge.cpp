@@ -28,8 +28,13 @@ Edge::~Edge() {
 
 }
 
+/**
+	The output stream for an Edge only prints the
+	end variable.
+*/
 std::ostream& operator<<(std::ostream& os, Edge& edge) {
-	os << edge.start << "->" << edge.end;
+	//os << edge.start << "->" << edge.end;
+	os << edge.end;
 	return os;
 }
 
