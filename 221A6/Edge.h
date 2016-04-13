@@ -30,9 +30,9 @@ class Edge {
 public:
 	Edge(int start, int end, int weight = 0);
 	~Edge();
+	void operator=(const Edge& edge);
 
 	friend std::ostream& operator<<(std::ostream& os, Edge& edge);
-
 	friend class Vertex;
 	friend class Graph;
 };

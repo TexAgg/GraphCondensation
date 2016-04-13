@@ -56,6 +56,15 @@ Graph::Graph(std::string filename) {
 	}
 }
 
+Graph::Graph(const Graph& graph) {
+	vertices = graph.vertices;
+	for (int i = 0; i < vertices.size(); i++) {
+		for (int j = 0; j < vertices[i].edge_list.size(); j++) {
+
+		}
+	}
+}
+
 Graph::~Graph() {
 
 }
@@ -87,6 +96,9 @@ Graph Graph::transpose(Graph graph) {
 	Graph new_graph;
 
 	// Do stuff
+	for (auto k : vertices) {
+
+	}
 
 	return new_graph;
 }

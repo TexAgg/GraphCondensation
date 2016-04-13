@@ -27,6 +27,12 @@ Edge::~Edge() {
 
 }
 
+void Edge::operator=(const Edge& edge) {
+	start = edge.start;
+	end = edge.end;
+	weight = edge.weight;
+}
+
 /**
 	The output operator for an Edge only prints the
 	end variable.

@@ -23,6 +23,11 @@ Vertex::~Vertex() {
 
 }
 
+void Vertex::operator=(const Vertex& vertex) {
+	label = vertex.label;
+	edge_list = vertex.edge_list;
+}
+
 void Vertex::connect_to(int end) {
 
 }

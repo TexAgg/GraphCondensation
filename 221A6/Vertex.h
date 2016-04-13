@@ -36,6 +36,8 @@ public:
 	Vertex(int l);
 	~Vertex();
 
+	// Assignment operator
+	void operator=(const Vertex& vertex);
 	// Connect this vertex to a specific vertex.
 	void connect_to(int end);
 	// Fill the edge_list from a string.

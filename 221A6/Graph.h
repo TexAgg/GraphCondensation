@@ -30,6 +30,7 @@ public:
 	Graph();
 	Graph(int size);
 	Graph(std::string filename);
+	Graph(const Graph& graph);
 	~Graph();
 
 	void build_graph();
