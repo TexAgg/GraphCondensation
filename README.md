@@ -5,6 +5,10 @@ and supplementary files [here](https://www.dropbox.com/sh/rcykbptpvj9og7n/AADdbk
 Due April 21.
 
 ---
+# Assignment
+The assignment is to make a graph data structure.
+
+---
 
 # Instructions
 
