@@ -83,4 +83,16 @@ void Graph::display_graph(std::ostream& os) {
 	}
 }
 
+Graph Graph::transpose(Graph graph) {
+	Graph new_graph;
+
+	// Do stuff
+
+	return new_graph;
+}
+
+void depth_first_search(Graph graph) {
+
+}
+
 } // End matt namespace

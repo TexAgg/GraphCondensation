@@ -23,13 +23,12 @@ weight(weight) {
 
 }
 
-
 Edge::~Edge() {
 
 }
 
 /**
-	The output stream for an Edge only prints the
+	The output operator for an Edge only prints the
 	end variable.
 */
 std::ostream& operator<<(std::ostream& os, Edge& edge) {
