@@ -24,6 +24,8 @@ namespace matt {
 */
 class Graph {
 
+	std::vector<Vertex> vertices;
+
 public:
 	Graph();
 	Graph(int size);
@@ -32,8 +34,6 @@ public:
 
 	void build_graph();
 	void display_graph(std::ostream& os = std::cout);
-
-	std::vector<Vertex> vertices;
 };
 
 //------------------------------------------------------------------------------

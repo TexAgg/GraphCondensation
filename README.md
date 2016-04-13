@@ -25,3 +25,6 @@ or type	`./Main <filename>` to run it with your own file.
 Type `make clean` to remove all of the output files.
 Typing `make run` runs the program without any command line arguments, 
 which will do nothing.
+
+## Mac
+I dunno, open it in xcode or something.
