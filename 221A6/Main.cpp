@@ -22,7 +22,12 @@ int main(int argc, char ** argv) {
 	}
 	
 	matt::Graph graph(argv[1]);
+	cout << "Here is the first graph:" << endl;
 	graph.display_graph();
+
+	cout << "\nHere is the second graph:" << endl;
+	matt::Graph graph2(graph);
+	graph2.display_graph();
 
 	return 0;
 }

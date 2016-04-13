@@ -59,8 +59,10 @@ Graph::Graph(std::string filename) {
 Graph::Graph(const Graph& graph) {
 	vertices = graph.vertices;
 	for (int i = 0; i < vertices.size(); i++) {
-		for (int j = 0; j < vertices[i].edge_list.size(); j++) {
-
+		std::list<Edge> temp_list = graph.vertices[i].edge_list;
+		while (!temp_list.empty()) {
+			vertices[i].edge_list.push_back(temp_list.front());
+			temp_list.pop_front();
 		}
 	}
 }
