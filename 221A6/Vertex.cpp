@@ -50,4 +50,8 @@ void Vertex::print_edges(std::ostream& os) {
 	os << -1 << std::endl;
 }
 
+bool operator<(const Vertex& l, const Vertex& r) {
+	return l.label < r.label;
+}
+
 } // End matt namespace

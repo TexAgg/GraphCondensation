@@ -108,8 +108,12 @@ Graph Graph::transpose() {
 	return new_graph;
 }
 
-void depth_first_search(Graph graph) {
+void Graph::depth_first_search(Vertex vertex) {
+	int time = 0;
+}
 
+void Graph::depth_first_search() {
+	depth_first_search(vertices[0]);
 }
 
 } // End matt namespace
