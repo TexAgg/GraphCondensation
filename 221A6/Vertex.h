@@ -19,6 +19,16 @@ namespace matt {
 
 //------------------------------------------------------------------------------
 
+enum Color { WHITE, BLACK, GREY };
+
+struct Time_Stamp {
+	int start;
+	int stop;
+	Color state = Color::WHITE;
+};
+
+//------------------------------------------------------------------------------
+
 /**
 	A Vertex has a list of edges that connect to it, 
 	and a label.
@@ -31,6 +41,7 @@ class Vertex {
 	int label;
 	// Linked list to manage edges.
 	std::list<Edge> edge_list;
+	Time_Stamp time_stamp;
 
 public:
 	Vertex(int l);
