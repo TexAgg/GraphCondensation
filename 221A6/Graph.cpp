@@ -90,8 +90,9 @@ void Graph::display_graph(std::ostream& os) {
 Graph Graph::transpose() {
 	Graph new_graph = Graph(*this);
 
+	// Empty the edge list for each Vertex
 	for (auto& v : new_graph.vertices) {
-		// Do stuff
+		v.edge_list.clear();
 	}
 
 	/*
