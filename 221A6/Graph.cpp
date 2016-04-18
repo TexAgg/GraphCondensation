@@ -87,12 +87,12 @@ void Graph::display_graph(std::ostream& os) {
 	}
 }
 
-Graph Graph::transpose(Graph graph) {
-	Graph new_graph;
+Graph Graph::transpose() {
+	Graph new_graph = Graph(*this);
 
 	// Reverse edges
-	for (auto k : vertices) {
-		for (auto l : k.edge_list) {
+	for (auto& k : new_graph.vertices) {
+		for (auto& l : k.edge_list) {
 			std::swap(l.end, l.start);
 			// TEST ME
 		}

@@ -35,7 +35,7 @@ public:
 
 	void build_graph();
 	void display_graph(std::ostream& os = std::cout);
-	Graph transpose(Graph graph);
+	Graph transpose();
 
 	friend void depth_first_search(Graph graph);
 };

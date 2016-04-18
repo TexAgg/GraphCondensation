@@ -25,9 +25,15 @@ int main(int argc, char ** argv) {
 	cout << "Here is the first graph:" << endl;
 	graph.display_graph();
 
-	cout << "\nHere is the second graph:" << endl;
+	matt::Graph graph_t = graph.transpose();
+	cout << "\nHere is the transpose:" << endl;
+	graph_t.display_graph();
+
+	/*
 	matt::Graph graph2(graph);
+	cout << "\nHere is the second graph:" << endl;
 	graph2.display_graph();
+	*/
 
 	return 0;
 }
