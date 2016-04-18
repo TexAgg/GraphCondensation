@@ -36,6 +36,7 @@ public:
 	void build_graph();
 	void display_graph(std::ostream& os = std::cout);
 	Graph transpose();
+	void depth_first_search();
 };
 
 //------------------------------------------------------------------------------

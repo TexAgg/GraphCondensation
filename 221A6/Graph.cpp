@@ -108,4 +108,13 @@ Graph Graph::transpose() {
 	return new_graph;
 }
 
+void Graph::depth_first_search() {
+	// Reset the vertices.
+	for (auto& v : vertices) {
+		v.time_stamp.start = -1;
+		v.time_stamp.stop = -1;
+		v.time_stamp.state = Color::WHITE;
+	}
+}
+
 } // End matt namespace
