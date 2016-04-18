@@ -24,6 +24,8 @@ namespace matt {
 */
 class Graph {
 
+	void dfs_visit();
+
 	std::vector<Vertex> vertices;
 
 public:
