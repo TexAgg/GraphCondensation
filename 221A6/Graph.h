@@ -23,8 +23,6 @@ namespace matt {
 	with functions to access them.
 */
 class Graph {
-	
-	void depth_first_search(Vertex* start);
 
 	std::vector<Vertex> vertices;
 
@@ -38,7 +36,6 @@ public:
 	void build_graph();
 	void display_graph(std::ostream& os = std::cout);
 	Graph transpose();
-	void depth_first_search();
 };
 
 //------------------------------------------------------------------------------
