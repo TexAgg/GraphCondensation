@@ -31,8 +31,8 @@ enum Color { WHITE, BLACK, GREY };
 	The Time_Stamp is used in depth-first search.
 */
 struct Time_Stamp {
-	int start;
-	int stop;
+	int start = -1;
+	int stop = -1;
 	Color state = Color::WHITE;
 };
 

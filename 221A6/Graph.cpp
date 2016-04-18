@@ -108,12 +108,21 @@ Graph Graph::transpose() {
 	return new_graph;
 }
 
-void Graph::depth_first_search(Vertex vertex) {
+// Possibly worthless
+void Graph::depth_first_search(Vertex* start) {
 	int time = 0;
+	Vertex test = *start;
 }
 
 void Graph::depth_first_search() {
-	depth_first_search(vertices[0]);
+	//depth_first_search(&vertices[0]);
+	
+	// Reset Vertices
+	for (auto& v : vertices) {
+		v.time_stamp.start = -1;
+		v.time_stamp.stop = -1;
+		v.time_stamp.state = Color::WHITE;
+	}
 }
 
 } // End matt namespace
