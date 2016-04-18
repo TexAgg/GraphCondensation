@@ -90,6 +90,11 @@ void Graph::display_graph(std::ostream& os) {
 Graph Graph::transpose() {
 	Graph new_graph = Graph(*this);
 
+	for (auto& v : new_graph.vertices) {
+		// Do stuff
+	}
+
+	/*
 	// Reverse edges
 	for (auto& k : new_graph.vertices) {
 		for (auto& l : k.edge_list) {
@@ -97,6 +102,7 @@ Graph Graph::transpose() {
 			// TEST ME
 		}
 	}
+	*/
 
 	return new_graph;
 }
