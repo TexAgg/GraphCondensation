@@ -23,8 +23,18 @@ weight(weight) {
 
 }
 
+Edge::Edge(const Edge& edge): 
+start(edge.start),
+end(edge.end),
+weight(edge.weight) {
+}
+
 Edge::~Edge() {
 
+}
+
+void Edge::reverse() {
+	std::swap(start, end);
 }
 
 void Edge::operator=(const Edge& edge) {

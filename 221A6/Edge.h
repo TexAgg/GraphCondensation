@@ -29,7 +29,11 @@ class Edge {
 
 public:
 	Edge(int start, int end, int weight = 0);
+	Edge(const Edge& edge);
 	~Edge();
+
+	void reverse();
+
 	void operator=(const Edge& edge);
 
 	friend std::ostream& operator<<(std::ostream& os, Edge& edge);

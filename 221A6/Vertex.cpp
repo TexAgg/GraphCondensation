@@ -28,8 +28,11 @@ void Vertex::operator=(const Vertex& vertex) {
 	edge_list = vertex.edge_list;
 }
 
+/**
+	Connect this Vertex to another Vertex.
+*/
 void Vertex::connect_to(int end) {
-
+	edge_list.emplace_back(label, end);
 }
 
 /**

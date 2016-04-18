@@ -13,7 +13,7 @@ Graph::Graph() {
 }
 
 Graph::Graph(int size) {
-	// I have no idea what this constructor is meant to do.
+	//vertices.resize(size);
 }
 
 /**
@@ -87,12 +87,22 @@ void Graph::display_graph(std::ostream& os) {
 	}
 }
 
+/**
+	Returns the transpose of the Graph.
+*/
 Graph Graph::transpose() {
 	Graph new_graph = Graph(*this);
 
 	// Empty the edge list for each Vertex
+	// in the new Graph
 	for (auto& v : new_graph.vertices) {
 		v.edge_list.clear();
+	}
+	// Populate edge lists
+	for (int i = 0; i < vertices.size(); i++) {
+		for (auto e : vertices[i].edge_list) {
+			new_graph.vertices[e.end-1].connect_to(i+1);
+		}
 	}
 
 	/*
