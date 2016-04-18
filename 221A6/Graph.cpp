@@ -90,9 +90,12 @@ void Graph::display_graph(std::ostream& os) {
 Graph Graph::transpose(Graph graph) {
 	Graph new_graph;
 
-	// Do stuff
+	// Reverse edges
 	for (auto k : vertices) {
-
+		for (auto l : k.edge_list) {
+			std::swap(l.end, l.start);
+			// TEST ME
+		}
 	}
 
 	return new_graph;
