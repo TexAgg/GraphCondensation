@@ -105,16 +105,6 @@ Graph Graph::transpose() {
 		}
 	}
 
-	/*
-	// Reverse edges
-	for (auto& k : new_graph.vertices) {
-		for (auto& l : k.edge_list) {
-			std::swap(l.end, l.start);
-			// TEST ME
-		}
-	}
-	*/
-
 	return new_graph;
 }
 

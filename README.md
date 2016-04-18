@@ -7,6 +7,8 @@ Due April 21.
 ---
 # Assignment
 The assignment is to make a graph data structure.
+Using the graph, we are supposed to find the strongly connecte components using
+depth-first search on the graph and on the transpose.
 
 ---
 
