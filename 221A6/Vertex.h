@@ -63,7 +63,6 @@ public:
 	// Fill the edge_list from a string.
 	void parse_list(std::string str);
 
-	friend bool operator<(const Vertex& l, const Vertex& r);
 	friend class Edge;
 	friend class Graph;
 };

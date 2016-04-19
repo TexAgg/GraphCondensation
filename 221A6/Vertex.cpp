@@ -30,6 +30,7 @@ void Vertex::operator=(const Vertex& vertex) {
 
 /**
 	Connect this Vertex to another Vertex.
+	@param end The Vertex to connect to.
 */
 void Vertex::connect_to(int end) {
 	edge_list.emplace_back(label, end);
@@ -48,10 +49,6 @@ void Vertex::print_edges(std::ostream& os) {
 		temp_list.pop_front();
 	}
 	os << -1 << std::endl;
-}
-
-bool operator<(const Vertex& l, const Vertex& r) {
-	return l.label < r.label;
 }
 
 } // End matt namespace

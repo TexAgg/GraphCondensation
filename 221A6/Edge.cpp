@@ -33,6 +33,9 @@ Edge::~Edge() {
 
 }
 
+/**
+	Reverses the direction of the Edge.
+*/
 void Edge::reverse() {
 	std::swap(start, end);
 }
