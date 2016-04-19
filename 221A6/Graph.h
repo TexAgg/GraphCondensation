@@ -26,6 +26,7 @@ namespace matt {
 class Graph {
 
 	void dfs_visit(Vertex& vertex, int* time);
+	void depth_first_search();
 
 	std::vector<Vertex> vertices;
 
@@ -39,7 +40,7 @@ public:
 	void build_graph();
 	void display_graph(std::ostream& os = std::cout);
 	Graph transpose();
-	void depth_first_search();
+	void display_dfs(std::ostream& os = std::cout);
 };
 
 //------------------------------------------------------------------------------

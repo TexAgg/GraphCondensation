@@ -108,12 +108,21 @@ Graph Graph::transpose() {
 	return new_graph;
 }
 
+/**
+	Visits the vertex during a DFS,
+	updating its search status and time stamps.
+	Called by depth_first_search and recursively
+	by its self.
+	@param vertex A reference to the vertex that is
+	currently being visited.
+	@param time A pointer to the current time,
+	which is the number of vertices visited.
+*/
 void Graph::dfs_visit(Vertex& vertex, int* time) {
 	vertex.time_stamp.state = Color::GREY;
 	(*time)++;
 	vertex.time_stamp.start = *time;
 
-	//Edge child = vertex.edge_list.front();
 	for (auto& e : vertex.edge_list) {
 		if (vertices[e.end - 1].time_stamp.state == Color::WHITE) {
 			dfs_visit(vertices[e.end - 1], time);
@@ -125,6 +134,10 @@ void Graph::dfs_visit(Vertex& vertex, int* time) {
 	vertex.time_stamp.stop = *time;
 }
 
+/**
+	Does a depth-first search on the graph,
+	visiting each vertex once.
+*/
 void Graph::depth_first_search() {
 	// Reset the vertices.
 	for (auto& v : vertices) {
@@ -138,7 +151,15 @@ void Graph::depth_first_search() {
 		if (v.time_stamp.state == Color::WHITE)
 			dfs_visit(v, &time);
 	}
+}
 
+/**
+	Displays the time stamps calculated
+	by performing a depth-first search.
+	@param os The ostream to display the data.
+*/
+void Graph::display_dfs(std::ostream& os) {
+	depth_first_search();
 	for (auto v : vertices) {
 		std::cout << v.label << "(" << v.time_stamp.start << "," << v.time_stamp.stop << "), ";
 	}

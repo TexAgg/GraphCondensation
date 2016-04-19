@@ -30,14 +30,15 @@ int main(int argc, char ** argv) {
 	graph_t.display_graph();
 
 	/*
+	// Test copy constructor.
 	matt::Graph graph2(graph);
 	cout << "\nHere is the second graph:" << endl;
 	graph2.display_graph();
 	*/
 
-	graph.depth_first_search();
-
-	//cout << "\ndebuggity\n";
+	cout << "\nNow we will display the results of a depth-first search:" << endl;
+	graph.display_dfs();
+	cout << "\n";
 
 	return 0;
 }
