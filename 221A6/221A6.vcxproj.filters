@@ -50,5 +50,8 @@
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="planning.md" />
+    <Text Include="Text.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

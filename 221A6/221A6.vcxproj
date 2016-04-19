@@ -115,6 +115,7 @@
       </ExcludedFromBuild>
     </Text>
     <Text Include="planning.md" />
+    <Text Include="Text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
