@@ -37,5 +37,7 @@ int main(int argc, char ** argv) {
 
 	graph.depth_first_search();
 
+	cout << "\ndebuggity\n";
+
 	return 0;
 }

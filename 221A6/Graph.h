@@ -12,6 +12,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <iterator>
 #include "Vertex.h"
 
 namespace matt {
