@@ -39,7 +39,7 @@ int main(int argc, char ** argv) {
 	cout << "\nNow we will display the results of a depth-first search:" << endl;
 	graph.display_dfs();
 	cout << "\n";
-	cout << "\nNow we will display the results of a depth-first search on the tranpose:" << endl;
+	cout << "\nNow we will display the results of a depth-first search on the transpose:" << endl;
 	graph_t.display_dfs();
 	cout << "\n";
 
