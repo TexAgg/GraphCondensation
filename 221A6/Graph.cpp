@@ -52,7 +52,7 @@ Graph::Graph(std::string filename) {
 		vertices.pop_back();
 	}
 	catch (std::ifstream::failure e) {
-		std::cerr << "Exception ocurred opening/closing/reading file." << std::endl;
+		std::cerr << "Exception occurred opening/closing/reading file." << std::endl;
 	}
 }
 
