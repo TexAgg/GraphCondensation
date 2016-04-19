@@ -1,28 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Comment CommentText="A Graph is a list of Vertices, and a Vertex is a list of Edges.&#xD;&#xA;An Edge is two points, start and end, with an optional weight.">
+  <Comment CommentText="A Graph is a list of Vertices, and a Vertex is a list of Edges.&#xD;&#xA;An Edge is two points, start and end, with an optional weight.&#xD;&#xA;Color and Time_Stamp are helper classes for the Vertex class.">
     <Position X="3.55" Y="0.842" Height="0.75" Width="4.917" />
   </Comment>
   <Class Name="matt::Edge">
     <Position X="7" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAgAAAAAAAAAAAABAAgAAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAAgAAAAAAAAAAAABAIgAAAgAAAAAAA=</HashCode>
       <FileName>Edge.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="matt::Graph">
     <Position X="3.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAQAAgACAAAQAAAAAE=</HashCode>
+      <HashCode>AAQAAAAAAAAAEAAAAAAAAAEAAAIQAAgACAAAQAAAAAE=</HashCode>
       <FileName>Graph.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="matt::Vertex">
     <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAABIBAAQAAAAAAQAAAAAAAACAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAIAAAABIBAAQAAAAAAQAAAAAAAACABgAAAAAAA=</HashCode>
       <FileName>Vertex.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Struct Name="matt::Time_Stamp" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Vertex.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="matt::Color" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vertex.h</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
