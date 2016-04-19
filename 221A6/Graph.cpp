@@ -132,12 +132,16 @@ void Graph::depth_first_search() {
 		v.time_stamp.stop = -1;
 		v.time_stamp.state = Color::WHITE;
 	}
+
 	int time = 0;
 	for (auto& v : vertices) {
 		if (v.time_stamp.state == Color::WHITE)
 			dfs_visit(v, &time);
 	}
 
+	for (auto v : vertices) {
+		std::cout << v.label << "(" << v.time_stamp.start << "," << v.time_stamp.stop << "), ";
+	}
 }
 
 } // End matt namespace
