@@ -110,21 +110,18 @@ Graph Graph::transpose() {
 
 void Graph::dfs_visit(Vertex& vertex, int* time) {
 	vertex.time_stamp.state = Color::GREY;
-	time++;
+	(*time)++;
 	vertex.time_stamp.start = *time;
 
 	//Edge child = vertex.edge_list.front();
-	std::list<Edge>::const_iterator it = vertex.edge_list.begin();
-	while (it->end != -1) {
-		if (vertices[it->end - 1].time_stamp.state == Color::WHITE) {
-			// child->element->parant = test
-			dfs_visit(vertices[it->end - 1], time);
+	for (auto& e : vertex.edge_list) {
+		if (vertices[e.end - 1].time_stamp.state == Color::WHITE) {
+			dfs_visit(vertices[e.end - 1], time);
 		}
-		//child = vertices[child.end-1].edge_list.front();
-		it++;
 	}
+
 	vertex.time_stamp.state = Color::BLACK;
-	time++;
+	(*time)++;
 	vertex.time_stamp.stop = *time;
 }
 
@@ -136,7 +133,7 @@ void Graph::depth_first_search() {
 		v.time_stamp.state = Color::WHITE;
 	}
 	int time = 0;
-	for (auto v : vertices) {
+	for (auto& v : vertices) {
 		if (v.time_stamp.state == Color::WHITE)
 			dfs_visit(v, &time);
 	}
