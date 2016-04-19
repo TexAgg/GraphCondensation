@@ -108,6 +108,14 @@ Graph Graph::transpose() {
 	return new_graph;
 }
 
+void Graph::dfs_visit(Vertex& vertex, int* time) {
+	vertex.time_stamp.state = Color::GREY;
+	time++;
+	vertex.time_stamp.start = *time;
+
+	Edge child = vertex.edge_list.front();
+}
+
 void Graph::depth_first_search() {
 	// Reset the vertices.
 	for (auto& v : vertices) {
@@ -115,6 +123,12 @@ void Graph::depth_first_search() {
 		v.time_stamp.stop = -1;
 		v.time_stamp.state = Color::WHITE;
 	}
+	int time = 0;
+	for (auto v : vertices) {
+		if (v.time_stamp.state == Color::WHITE)
+			dfs_visit(v, &time);
+	}
+
 }
 
 } // End matt namespace

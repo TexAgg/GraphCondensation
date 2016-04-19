@@ -35,5 +35,7 @@ int main(int argc, char ** argv) {
 	graph2.display_graph();
 	*/
 
+	graph.depth_first_search();
+
 	return 0;
 }

@@ -24,7 +24,7 @@ namespace matt {
 */
 class Graph {
 
-	void dfs_visit();
+	void dfs_visit(Vertex& vertex, int* time);
 
 	std::vector<Vertex> vertices;
 

@@ -25,7 +25,7 @@ namespace matt {
 	Grey -> visited once
 	Black -> visited twice
 */
-enum Color { WHITE, BLACK, GREY };
+enum Color { WHITE, GREY, BLACK};
 
 /**
 	The Time_Stamp is used in depth-first search.
