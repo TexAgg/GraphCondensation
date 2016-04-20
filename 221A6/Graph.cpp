@@ -64,8 +64,20 @@ Graph::Graph(const Graph& graph) {
 	vertices = graph.vertices;
 }
 
+/**
+	Creates a Graph with just one Vertex.
+*/
+Graph::Graph(Vertex vertex) {
+	vertices.push_back(vertex);
+}
+
 Graph::~Graph() {
 
+}
+
+void Graph::insert(Vertex vertex, int end) {
+	vertex.connect_to(end);
+	vertices.push_back(vertex);
 }
 
 /**

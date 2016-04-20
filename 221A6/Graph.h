@@ -35,8 +35,10 @@ public:
 	Graph(int size);
 	Graph(std::string filename);
 	Graph(const Graph& graph);
+	Graph(Vertex vertex);
 	~Graph();
 
+	void insert(Vertex vertex, int end);
 	const int size();
 	void build_graph();
 	void display_graph(std::ostream& os = std::cout);
