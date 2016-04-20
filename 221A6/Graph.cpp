@@ -77,11 +77,11 @@ Graph::~Graph() {
 
 void Graph::insert(Vertex vertex, int end) {
 	vertices.push_back(vertex);
-	reorder();
-	vertices[end - 1].connect_to(vertex.label);
-
-	//vertex.connect_to(end);
 	//reorder();
+	//vertices[end - 1].connect_to(vertex.label);
+
+	vertex.connect_to(end);
+	reorder();
 }
 
 /**
@@ -209,8 +209,10 @@ Graph Graph::get_acyclic() {
 		}
 	}
 
+	magic.edge_list.clear();
 	Graph acycle(magic);
 	for (auto k : acyclic_vertices) {
+		//k.edge_list.clear();
 		acycle.insert(k, magic.label);
 	}
 
