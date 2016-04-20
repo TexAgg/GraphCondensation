@@ -215,13 +215,13 @@ Graph Graph::get_acyclic() {
 	//for (auto k : acyclic_vertices) k.edge_list.clear();
 	Graph acycle(magic);
 	for (auto k : acyclic_vertices) {
-		//k.edge_list.clear();
 		acycle.insert(k, magic.label);
 	}
 
 	for (auto& v : vertices) {
 		for (auto& e : v.edge_list) {
-
+			// If e.end is not in acyclic_vertices,
+			// replace it with magic.
 		}
 	}
 
