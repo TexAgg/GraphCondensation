@@ -198,10 +198,10 @@ Graph Graph::get_acyclic() {
 	t.depth_first_search(t.size());
 	for (auto v : t.vertices) {
 		if (v.time_stamp.stop < 2 * t.size()) {
-			acyclic_vertices.push_back(v);
+			acyclic_vertices.push_back(vertices[v.label-1]);
 		}
-		else if (v.time_stamp.start = 2 * t.size()) {
-			magic = v;
+		else if (v.time_stamp.start == 2 * t.size()) {
+			magic = vertices[v.label-1];
 		}
 	}
 
