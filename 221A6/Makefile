@@ -19,8 +19,11 @@ Edge.o: Edge.cpp Edge.h
 run:
 	./Main
 
-test:
-	./Main input.txt
+test1:
+	./Main test1.txt
+
+test2:
+	./Main test2.txt
 
 clean: 
 	rm -f $(OBJ) $(MAIN)

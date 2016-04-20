@@ -46,11 +46,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="input.txt">
+    <Text Include="planning.md" />
+    <Text Include="test1.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="planning.md" />
-    <Text Include="Text.txt">
+    <Text Include="test2.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
