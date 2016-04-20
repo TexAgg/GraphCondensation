@@ -193,6 +193,9 @@ void Graph::display_dfs(int start, std::ostream& os) {
 	}
 }
 
+/**
+	Returns the acyclic component of the Graph.
+*/
 Graph Graph::get_acyclic() {
 	//Graph acycle;
 	Graph t = transpose();
@@ -230,13 +233,16 @@ Graph Graph::get_acyclic() {
 			}
 			else
 				e++;
-
 		}
 	}
 
 	return acycle;
 }
 
+/**
+	Makes sure the the labels for vertices
+	match their place in the vertices vector.
+*/
 void Graph::reorder() {
 	std::vector<Vertex> new_vertices;
 	
@@ -250,6 +256,10 @@ void Graph::reorder() {
 	vertices = new_vertices;
 }
 
+/**
+	Checks to see if a Vertex of a given label 
+	is in a vector of vertices.
+*/
 bool contains(std::vector<Vertex> vector, int end) {
 	//bool flag = false;
 
