@@ -18,6 +18,9 @@ Vertex::Vertex(int l) : label(l) {
 
 }
 
+Vertex::Vertex() {
+
+}
 
 Vertex::~Vertex() {
 

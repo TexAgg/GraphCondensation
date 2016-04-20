@@ -54,6 +54,7 @@ class Vertex {
 
 public:
 	Vertex(int l);
+	Vertex();
 	~Vertex();
 
 	// Assignment operator

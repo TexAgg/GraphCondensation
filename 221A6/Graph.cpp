@@ -178,6 +178,20 @@ void Graph::display_dfs(int start, std::ostream& os) {
 
 Graph Graph::get_acyclic() {
 	Graph acycle;
+	Graph t = transpose();
+	std::vector<Vertex> acyclic_vertices;
+	Vertex magic;
+
+	//depth_first_search();
+	t.depth_first_search(t.size());
+	for (auto v : t.vertices) {
+		if (v.time_stamp.stop < 2 * t.size()) {
+			acyclic_vertices.push_back(v);
+		}
+		else if (v.time_stamp.start = 2 * t.size()) {
+			magic = v;
+		}
+	}
 
 	// Do stuff.
 
