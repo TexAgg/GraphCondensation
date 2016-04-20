@@ -28,3 +28,13 @@ Type `make clean` to remove all of the output files.
 
 ## Mac
 I dunno, open it in xcode or something.
+
+---
+
+# Tests
+* [test1.txt](https://bitbucket.org/gaikema/csce221-a6/src/41209edfb34d93d6df8f381c5e0af4cc4e433666/221A6/test1.txt?at=master&fileviewer=file-view-default)
+is the graph example given in the assignment.
+* [test2.txt](https://bitbucket.org/gaikema/csce221-a6/src/41209edfb34d93d6df8f381c5e0af4cc4e433666/221A6/test2.txt?at=master&fileviewer=file-view-default)
+is the graph shown in class as an example for finding the strongly connected components.
+* [test3.txt](https://bitbucket.org/gaikema/csce221-a6/src/41209edfb34d93d6df8f381c5e0af4cc4e433666/221A6/test3.txt?at=master&fileviewer=file-view-default)
+is the graph found [here](http://courses.cs.tamu.edu/teresa/cpsc211/BFS-DFS/DFS/DFS.html).
