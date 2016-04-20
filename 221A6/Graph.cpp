@@ -209,7 +209,10 @@ Graph Graph::get_acyclic() {
 		}
 	}
 
+	// There are still extra elements.
+
 	magic.edge_list.clear();
+	//for (auto k : acyclic_vertices) k.edge_list.clear();
 	Graph acycle(magic);
 	for (auto k : acyclic_vertices) {
 		//k.edge_list.clear();
