@@ -37,6 +37,7 @@ public:
 	Graph(const Graph& graph);
 	~Graph();
 
+	const int size();
 	void build_graph();
 	void display_graph(std::ostream& os = std::cout);
 	Graph transpose();

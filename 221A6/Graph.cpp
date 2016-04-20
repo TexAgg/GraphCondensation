@@ -64,6 +64,13 @@ Graph::~Graph() {
 
 }
 
+/**
+	@return The number of vertices.
+*/
+const int Graph::size() {
+	return vertices.size();
+}
+
 void Graph::build_graph() {
 
 }
