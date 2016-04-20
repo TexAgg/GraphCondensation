@@ -189,7 +189,7 @@ void Graph::display_dfs(int start, std::ostream& os) {
 }
 
 Graph Graph::get_acyclic() {
-	Graph acycle;
+	//Graph acycle;
 	Graph t = transpose();
 	std::vector<Vertex> acyclic_vertices;
 	Vertex magic;
@@ -205,7 +205,10 @@ Graph Graph::get_acyclic() {
 		}
 	}
 
-	// Do stuff.
+	Graph acycle(magic);
+	for (auto k : acyclic_vertices) {
+		acycle.insert(k, magic.label);
+	}
 
 	return acycle;
 }

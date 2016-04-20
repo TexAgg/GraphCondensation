@@ -43,5 +43,9 @@ int main(int argc, char ** argv) {
 	graph_t.display_dfs(graph_t.size());
 	cout << "\n";
 
+	cout << "\nNow we will display the acyclic components:\n" << endl;
+	matt::Graph acyclic = graph.get_acyclic();
+	acyclic.display_graph();
+
 	return 0;
 }
