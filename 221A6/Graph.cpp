@@ -203,7 +203,7 @@ Graph Graph::get_acyclic() {
 	Vertex magic;
 
 	//depth_first_search();
-	t.depth_first_search(t.size());
+	t.depth_first_search(t.size()*2);
 	for (auto v : t.vertices) {
 		if (v.time_stamp.stop < 2 * t.size()) {
 			acyclic_vertices.push_back(vertices[v.label-1]);
