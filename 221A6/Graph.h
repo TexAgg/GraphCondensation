@@ -47,6 +47,8 @@ public:
 	Graph transpose();
 	void display_dfs(int start = 0, std::ostream& os = std::cout);
 	Graph get_acyclic();
+
+	//friend bool contains(std::vector<Vertex> vector, int end);
 };
 
 //------------------------------------------------------------------------------

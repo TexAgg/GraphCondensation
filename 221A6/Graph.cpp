@@ -76,6 +76,7 @@ Graph::~Graph() {
 }
 
 void Graph::insert(Vertex vertex, int end) {
+	//vertex.edge_list.clear();
 	vertices.push_back(vertex);
 	//reorder();
 	//vertices[end - 1].connect_to(vertex.label);
@@ -222,6 +223,10 @@ Graph Graph::get_acyclic() {
 		for (auto& e : v.edge_list) {
 			// If e.end is not in acyclic_vertices,
 			// replace it with magic.
+
+			if (!contains(acyclic_vertices, e.end) && e.start!=magic.label) {
+				e.end = magic.label;
+			}
 		}
 	}
 
@@ -239,6 +244,16 @@ void Graph::reorder() {
 			new_vertices[v.label - 1] = v;
 	}
 	vertices = new_vertices;
+}
+
+bool contains(std::vector<Vertex> vector, int end) {
+	//bool flag = false;
+
+	for (auto v : vector) {
+		if (v.label == end)
+			return true;
+	}
+	return false;
 }
 
 } // End matt namespace
