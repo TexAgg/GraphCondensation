@@ -40,7 +40,7 @@ int main(int argc, char ** argv) {
 	graph.display_dfs();
 	cout << "\n";
 	cout << "\nNow we will display the results of a depth-first search on the transpose:" << endl;
-	graph_t.display_dfs();
+	graph_t.display_dfs(14);
 	cout << "\n";
 
 	return 0;

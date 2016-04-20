@@ -138,7 +138,7 @@ void Graph::dfs_visit(Vertex& vertex, int* time) {
 	Does a depth-first search on the graph,
 	visiting each vertex once.
 */
-void Graph::depth_first_search() {
+void Graph::depth_first_search(int start) {
 	// Reset the vertices.
 	for (auto& v : vertices) {
 		v.time_stamp.start = -1;
@@ -146,10 +146,10 @@ void Graph::depth_first_search() {
 		v.time_stamp.state = Color::WHITE;
 	}
 
-	int time = 0;
-	for (auto& v : vertices) {
-		if (v.time_stamp.state == Color::WHITE)
-			dfs_visit(v, &time);
+	int time = start;
+	for (int i = 0; i < vertices.size(); i++) {
+		if (vertices[i].time_stamp.state == Color::WHITE)
+			dfs_visit(vertices[i], &time);
 	}
 }
 
@@ -158,8 +158,8 @@ void Graph::depth_first_search() {
 	by performing a depth-first search.
 	@param os The ostream to display the data.
 */
-void Graph::display_dfs(std::ostream& os) {
-	depth_first_search();
+void Graph::display_dfs(int start, std::ostream& os) {
+	depth_first_search(start);
 	for (auto v : vertices) {
 		std::cout << v.label << "(" << v.time_stamp.start << "," << v.time_stamp.stop << "), ";
 	}
