@@ -129,14 +129,15 @@ Graph Graph::transpose() {
 	@param time A pointer to the current time,
 	which is the number of vertices visited.
 */
-void Graph::dfs_visit(Vertex& vertex, int* time) {
+void Graph::dfs_visit(Vertex& vertex, int* time, std::list<Vertex>& lst) {
 	vertex.time_stamp.state = Color::GREY;
 	(*time)++;
 	vertex.time_stamp.start = *time;
 
 	for (auto& e : vertex.edge_list) {
 		if (vertices[e.end - 1].time_stamp.state == Color::WHITE) {
-			dfs_visit(vertices[e.end - 1], time);
+			lst.push_back(vertices[e.end - 1]);
+			dfs_visit(vertices[e.end - 1], time, lst);
 		}
 	}
 
@@ -158,9 +159,12 @@ void Graph::depth_first_search(int start) {
 	}
 
 	int time = start;
+	//dfs_visit(vertices[0], &time);
 	for (int i = 0; i < vertices.size(); i++) {
-		if (vertices[i].time_stamp.state == Color::WHITE)
-			dfs_visit(vertices[i], &time);
+		if (vertices[i].time_stamp.state == Color::WHITE) {
+			scc.emplace(vertices[i], std::list<Vertex>{});
+			dfs_visit(vertices[i], &time, scc[vertices[i]]);
+		}
 	}
 }
 
@@ -182,6 +186,10 @@ Graph Graph::get_acyclic() {
 	// Do stuff.
 
 	return acycle;
+}
+
+void Graph::print_scc() {
+
 }
 
 } // End matt namespace

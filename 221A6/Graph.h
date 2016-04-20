@@ -13,6 +13,9 @@
 #include <fstream>
 #include <sstream>
 #include <iterator>
+#include <stack>
+#include <unordered_map>
+#include <map>
 #include "Vertex.h"
 
 namespace matt {
@@ -25,10 +28,11 @@ namespace matt {
 */
 class Graph {
 
-	void dfs_visit(Vertex& vertex, int* time);
+	void dfs_visit(Vertex& vertex, int* time, std::list<Vertex>& lst);
 	void depth_first_search(int start = 0);
 
 	std::vector<Vertex> vertices;
+	std::map<Vertex, std::list<Vertex>> scc;
 
 public:
 	Graph();
@@ -43,6 +47,7 @@ public:
 	Graph transpose();
 	void display_dfs(int start = 0, std::ostream& os = std::cout);
 	Graph get_acyclic();
+	void print_scc();
 };
 
 //------------------------------------------------------------------------------

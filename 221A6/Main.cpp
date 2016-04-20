@@ -21,6 +21,7 @@ int main(int argc, char ** argv) {
 		return 1;
 	}
 	
+	cout << "The file input was " << argv[1] << "." << endl;
 	matt::Graph graph(argv[1]);
 	cout << "Here is the first graph:" << endl;
 	graph.display_graph();
@@ -40,7 +41,8 @@ int main(int argc, char ** argv) {
 	graph.display_dfs();
 	cout << "\n";
 	cout << "\nNow we will display the results of a depth-first search on the transpose:" << endl;
-	graph_t.display_dfs(graph_t.size());
+	//graph_t.display_dfs(graph_t.size()*2);
+	graph_t.display_dfs();
 	cout << "\n";
 
 	return 0;
