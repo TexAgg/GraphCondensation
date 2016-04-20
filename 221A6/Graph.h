@@ -13,6 +13,7 @@
 #include <fstream>
 #include <sstream>
 #include <iterator>
+#include <algorithm>
 #include "Vertex.h"
 
 namespace matt {
@@ -27,6 +28,7 @@ class Graph {
 
 	void dfs_visit(Vertex& vertex, int* time);
 	void depth_first_search(int start = 0);
+	void reorder();
 
 	std::vector<Vertex> vertices;
 

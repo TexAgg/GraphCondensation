@@ -76,8 +76,12 @@ Graph::~Graph() {
 }
 
 void Graph::insert(Vertex vertex, int end) {
-	vertex.connect_to(end);
+	reorder();
+	vertices[end - 1].connect_to(vertex.label);
+
+	//vertex.connect_to(end);
 	vertices.push_back(vertex);
+	//reorder();
 }
 
 /**
@@ -211,6 +215,18 @@ Graph Graph::get_acyclic() {
 	}
 
 	return acycle;
+}
+
+void Graph::reorder() {
+	std::vector<Vertex> new_vertices;
+	
+	int new_size = std::max_element(vertices.begin(), vertices.end())->label;
+	new_vertices.resize(new_size);
+
+	for (auto v : vertices) {
+		new_vertices[v.label - 1] = v;
+	}
+	vertices = new_vertices;
 }
 
 } // End matt namespace
