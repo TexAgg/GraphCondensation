@@ -219,6 +219,12 @@ Graph Graph::get_acyclic() {
 		acycle.insert(k, magic.label);
 	}
 
+	for (auto& v : vertices) {
+		for (auto& e : v.edge_list) {
+
+		}
+	}
+
 	return acycle;
 }
 
@@ -233,12 +239,6 @@ void Graph::reorder() {
 			new_vertices[v.label - 1] = v;
 	}
 	vertices = new_vertices;
-
-	for (auto& v : vertices) {
-		for (auto& e : v.edge_list) {
-
-		}
-	}
 }
 
 } // End matt namespace
