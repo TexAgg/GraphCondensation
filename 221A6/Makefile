@@ -25,5 +25,8 @@ test1:
 test2:
 	./Main test2.txt
 
+test3:
+	./Main test3.txt
+
 clean: 
 	rm -f $(OBJ) $(MAIN)
