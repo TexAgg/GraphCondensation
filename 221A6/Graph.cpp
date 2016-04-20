@@ -219,6 +219,21 @@ Graph Graph::get_acyclic() {
 		acycle.insert(k, magic.label);
 	}
 
+	for (auto& v : acycle.vertices) {
+		for (auto e = v.edge_list.begin(); e!=v.edge_list.end();) {
+			// If e.end is not in acyclic_vertices,
+			// replace it with magic.
+			
+			if (!contains(acyclic_vertices, e->end) && e->end!=magic.label) {
+				//e.end = magic.label;
+				e = v.edge_list.erase(e);
+			}
+			else
+				e++;
+
+		}
+	}
+
 	return acycle;
 }
 
