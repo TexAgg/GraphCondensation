@@ -76,11 +76,11 @@ Graph::~Graph() {
 }
 
 void Graph::insert(Vertex vertex, int end) {
+	vertices.push_back(vertex);
 	reorder();
 	vertices[end - 1].connect_to(vertex.label);
 
 	//vertex.connect_to(end);
-	vertices.push_back(vertex);
 	//reorder();
 }
 
@@ -224,7 +224,8 @@ void Graph::reorder() {
 	new_vertices.resize(new_size);
 
 	for (auto v : vertices) {
-		new_vertices[v.label - 1] = v;
+		if (v.label != 0)
+			new_vertices[v.label - 1] = v;
 	}
 	vertices = new_vertices;
 }
