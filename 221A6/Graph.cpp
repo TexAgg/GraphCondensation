@@ -14,6 +14,7 @@ Graph::Graph() {
 
 Graph::Graph(int size) {
 	//vertices.resize(size);
+	// idk
 }
 
 /**
@@ -56,6 +57,9 @@ Graph::Graph(std::string filename) {
 	}
 }
 
+/**
+	Copy constructor for a Graph.
+*/
 Graph::Graph(const Graph& graph) {
 	vertices = graph.vertices;
 }
@@ -72,7 +76,7 @@ const int Graph::size() {
 }
 
 void Graph::build_graph() {
-
+	// idk
 }
 
 /**
@@ -170,6 +174,14 @@ void Graph::display_dfs(int start, std::ostream& os) {
 	for (auto v : vertices) {
 		std::cout << v.label << "(" << v.time_stamp.start << "," << v.time_stamp.stop << "), ";
 	}
+}
+
+Graph Graph::get_acyclic() {
+	Graph acycle;
+
+	// Do stuff.
+
+	return acycle;
 }
 
 } // End matt namespace

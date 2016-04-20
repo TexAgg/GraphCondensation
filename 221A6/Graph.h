@@ -42,6 +42,7 @@ public:
 	void display_graph(std::ostream& os = std::cout);
 	Graph transpose();
 	void display_dfs(int start = 0, std::ostream& os = std::cout);
+	Graph get_acyclic();
 };
 
 //------------------------------------------------------------------------------
