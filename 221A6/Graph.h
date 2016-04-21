@@ -15,6 +15,7 @@
 #include <iterator>
 #include <stack>
 #include <map>
+#include <algorithm>
 #include "Vertex.h"
 
 namespace matt {
@@ -30,6 +31,7 @@ class Graph {
 	void insert(Vertex vertex);
 	void dfs_visit(Vertex& vertex, int* time, std::list<Vertex>& lst);
 	void depth_first_search(int start = 0);
+	void reorder();
 
 	std::vector<Vertex> vertices;
 	std::map<Vertex, std::list<Vertex>> scc;
@@ -42,6 +44,7 @@ public:
 	Graph(Vertex vertex);
 	~Graph();
 
+	void insert(Vertex vertex, int end);
 	const int size();
 	void build_graph();
 	void display_graph(std::ostream& os = std::cout);

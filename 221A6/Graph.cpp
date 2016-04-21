@@ -12,6 +12,16 @@ Graph::Graph() {
 
 }
 
+void Graph::insert(Vertex vertex, int end) {
+	//vertex.edge_list.clear();
+	vertices.push_back(vertex);
+	//reorder();
+	//vertices[end - 1].connect_to(vertex.label);
+
+	vertex.connect_to(end);
+	reorder();
+}
+
 Graph::Graph(int size) {
 	//vertices.resize(size);
 	// idk
@@ -193,6 +203,9 @@ Graph Graph::get_acyclic() {
 	depth_first_search();
 	
 	Graph acycle;
+	for (auto k : scc) {
+		acycle.insert(k.first);
+	}
 
 	/*
 		Make a new graph with the keys of scc.
@@ -215,6 +228,23 @@ void Graph::print_scc() {
 		}
 		std::cout << "\n";
 	}
+}
+
+/**
+Makes sure the the labels for vertices
+match their place in the vertices vector.
+*/
+void Graph::reorder() {
+	std::vector<Vertex> new_vertices;
+
+	int new_size = std::max_element(vertices.begin(), vertices.end())->label;
+	new_vertices.resize(new_size);
+
+	for (auto v : vertices) {
+		if (v.label != 0)
+			new_vertices[v.label - 1] = v;
+	}
+	vertices = new_vertices;
 }
 
 void Graph::insert(Vertex vertex) {
