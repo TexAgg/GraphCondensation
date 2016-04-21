@@ -182,9 +182,16 @@ void Graph::display_dfs(int start, std::ostream& os) {
 }
 
 Graph Graph::get_acyclic() {
+	// Make sure the SCCs are up-to-date.
+	depth_first_search();
+	
 	Graph acycle;
 
-	// Do stuff.
+	/*
+		Make a new graph with the keys of scc.
+		Keep the same edge lists, but remove any edges
+		referencing any strongly-connected elements.
+	*/
 
 	return acycle;
 }
@@ -198,8 +205,6 @@ void Graph::print_scc() {
 		std::cout << k.first << ", ";
 		for (auto j : k.second) {
 			std::cout << j << ", ";
-			//j.print_edges();
-			//std::cout << "\n";
 		}
 		std::cout << "\n";
 	}
