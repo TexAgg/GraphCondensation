@@ -47,7 +47,7 @@ int main(int argc, char ** argv) {
 	cout << "\n";
 	*/
 
-	cout << "\nGonna show the strongly connected components:" << endl;
+	cout << "\nNow I will show the strongly connected components:" << endl;
 	graph_t.print_scc();
 
 	return 0;

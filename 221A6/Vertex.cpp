@@ -55,4 +55,9 @@ bool operator<(const Vertex& lhs, const Vertex& rhs) {
 	return lhs.label < rhs.label;
 }
 
+std::ostream& operator<<(std::ostream& os, const Vertex& vertex) {
+	os << vertex.label;
+	return os;
+}
+
 } // End matt namespace

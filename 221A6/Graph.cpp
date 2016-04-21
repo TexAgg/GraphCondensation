@@ -191,11 +191,13 @@ Graph Graph::get_acyclic() {
 void Graph::print_scc() {
 	depth_first_search();
 	for (auto k : scc) {
+		std::cout << k.first << ", ";
 		for (auto j : k.second) {
-			//std::cout << j << ", ";
-			j.print_edges();
+			std::cout << j << ", ";
+			//j.print_edges();
 			//std::cout << "\n";
 		}
+		std::cout << "\n";
 	}
 }
 
