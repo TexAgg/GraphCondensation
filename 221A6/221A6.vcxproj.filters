@@ -56,5 +56,6 @@
     <Text Include="test3.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="..\CMakeLists.txt" />
   </ItemGroup>
 </Project>
