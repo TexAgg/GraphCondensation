@@ -37,6 +37,7 @@ int main(int argc, char ** argv) {
 	graph2.display_graph();
 	*/
 
+	/*
 	cout << "\nNow we will display the results of a depth-first search:" << endl;
 	graph.display_dfs();
 	cout << "\n";
@@ -44,6 +45,10 @@ int main(int argc, char ** argv) {
 	//graph_t.display_dfs(graph_t.size()*2);
 	graph_t.display_dfs();
 	cout << "\n";
+	*/
+
+	cout << "\nGonna show the strongly connected components:" << endl;
+	graph_t.print_scc();
 
 	return 0;
 }
