@@ -12,6 +12,13 @@ Graph::Graph() {
 
 }
 
+/**
+	Inserts a Vertex and adds an edge
+	from it to the Vertex of label end.
+	@param vertex The vertex to insert.
+	@param end The label of the Vertex to
+	connect it to.
+*/
 void Graph::insert(Vertex vertex, int end) {
 	//vertex.edge_list.clear();
 	vertices.push_back(vertex);
@@ -198,6 +205,9 @@ void Graph::display_dfs(int start, std::ostream& os) {
 	}
 }
 
+/**
+	@return The acyclic component of the Graph.
+*/
 Graph Graph::get_acyclic() {
 	// Make sure the SCCs are up-to-date.
 	depth_first_search();
@@ -247,6 +257,13 @@ void Graph::reorder() {
 	vertices = new_vertices;
 }
 
+/**
+	Insert a Vertex, without specifying what
+	it connects to.
+	This method is private because a Vertex
+	shouldn't be an island.
+	@param vertex A Vertex.
+*/
 void Graph::insert(Vertex vertex) {
 
 }
