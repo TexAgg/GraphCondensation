@@ -128,6 +128,7 @@ Graph Graph::transpose() {
 	currently being visited.
 	@param time A pointer to the current time,
 	which is the number of vertices visited.
+	@param lst A list of strongly-connected vertices.
 */
 void Graph::dfs_visit(Vertex& vertex, int* time, std::list<Vertex>& lst) {
 	vertex.time_stamp.state = Color::GREY;
@@ -159,7 +160,6 @@ void Graph::depth_first_search(int start) {
 	}
 
 	int time = start;
-	//dfs_visit(vertices[0], &time);
 	for (int i = 0; i < vertices.size(); i++) {
 		if (vertices[i].time_stamp.state == Color::WHITE) {
 			scc.emplace(vertices[i], std::list<Vertex>{});
@@ -171,6 +171,7 @@ void Graph::depth_first_search(int start) {
 /**
 	Displays the time stamps calculated
 	by performing a depth-first search.
+	@param start The Vertex to start at.
 	@param os The ostream to display the data.
 */
 void Graph::display_dfs(int start, std::ostream& os) {
@@ -188,6 +189,9 @@ Graph Graph::get_acyclic() {
 	return acycle;
 }
 
+/**
+	Displays the strongly connected components.
+*/
 void Graph::print_scc() {
 	depth_first_search();
 	for (auto k : scc) {
