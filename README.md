@@ -29,6 +29,14 @@ Type `make clean` to remove all of the output files.
 ## Mac
 I dunno, open it in xcode or something.
 
+## CMake
+```
+$ mkdir _build
+$ cd _build
+$ cmake ..\cmakelists.txt
+```
+The build files will be in the `_build` folder.
+
 ---
 
 # Tests
