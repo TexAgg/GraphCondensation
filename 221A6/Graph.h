@@ -27,6 +27,7 @@ namespace matt {
 */
 class Graph {
 
+	void insert(Vertex vertex);
 	void dfs_visit(Vertex& vertex, int* time, std::list<Vertex>& lst);
 	void depth_first_search(int start = 0);
 
@@ -38,6 +39,7 @@ public:
 	Graph(int size);
 	Graph(std::string filename);
 	Graph(const Graph& graph);
+	Graph(Vertex vertex);
 	~Graph();
 
 	const int size();

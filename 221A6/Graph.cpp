@@ -64,6 +64,13 @@ Graph::Graph(const Graph& graph) {
 	vertices = graph.vertices;
 }
 
+/**
+Creates a Graph with just one Vertex.
+*/
+Graph::Graph(Vertex vertex) {
+	vertices.push_back(vertex);
+}
+
 Graph::~Graph() {
 
 }
@@ -208,6 +215,10 @@ void Graph::print_scc() {
 		}
 		std::cout << "\n";
 	}
+}
+
+void Graph::insert(Vertex vertex) {
+
 }
 
 } // End matt namespace
