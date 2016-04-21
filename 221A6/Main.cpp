@@ -50,5 +50,9 @@ int main(int argc, char ** argv) {
 	cout << "\nNow I will show the strongly connected components:" << endl;
 	graph_t.print_scc();
 
+	cout << "\nNow I will display the acyclic component:\n" << endl;
+	matt::Graph graph_a = graph.get_acyclic();
+	graph_a.display_graph();
+
 	return 0;
 }

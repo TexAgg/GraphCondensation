@@ -66,6 +66,7 @@ public:
 
 	friend std::ostream& operator<<(std::ostream& os, const Vertex& vertex);
 	friend bool operator<(const Vertex& lhs, const Vertex& rhs);
+	friend bool contains(std::vector<Vertex> vector, int end);
 	friend class Edge;
 	friend class Graph;
 };

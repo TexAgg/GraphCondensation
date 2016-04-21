@@ -211,17 +211,23 @@ void Graph::display_dfs(int start, std::ostream& os) {
 Graph Graph::get_acyclic() {
 	// Make sure the SCCs are up-to-date.
 	depth_first_search();
-	
-	Graph acycle;
-	for (auto k : scc) {
-		acycle.insert(k.first);
-	}
+	Graph t = transpose();
+	t.depth_first_search();
 
 	/*
 		Make a new graph with the keys of scc.
 		Keep the same edge lists, but remove any edges
 		referencing any strongly-connected elements.
 	*/
+
+	Graph acycle;
+	for (auto k : t.scc) {
+		// WRONG!
+		// I need to insert the regular version of k.
+		acycle.insert(k.first);
+	}
+
+	// Handle connections.
 
 	return acycle;
 }
@@ -265,7 +271,24 @@ void Graph::reorder() {
 	@param vertex A Vertex.
 */
 void Graph::insert(Vertex vertex) {
-
+	vertices.push_back(vertex);
+	reorder();
 }
+
+/**
+Checks to see if a Vertex of a given label
+is in a vector of vertices.
+*/
+/*
+bool contains(std::vector<Vertex> vector, int end) {
+	//bool flag = false;
+
+	for (auto v : vector) {
+		if (v.label == end)
+			return true;
+	}
+	return false;
+}
+*/
 
 } // End matt namespace

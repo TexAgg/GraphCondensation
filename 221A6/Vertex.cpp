@@ -63,4 +63,18 @@ std::ostream& operator<<(std::ostream& os, const Vertex& vertex) {
 	return os;
 }
 
+/**
+Checks to see if a Vertex of a given label
+is in a vector of vertices.
+*/
+bool contains(std::vector<Vertex> vector, int end) {
+	//bool flag = false;
+
+	for (auto v : vector) {
+		if (v.label == end)
+			return true;
+	}
+	return false;
+}
+
 } // End matt namespace
