@@ -230,13 +230,17 @@ Graph Graph::get_acyclic() {
 
 	Graph acycle;
 	for (auto k : t.scc) {
-		// WRONG!
-		// I need to insert the regular version of k.
-		// Remove extra Vertices.
 		acycle.insert(vertices[k.first.label-1]);
 	}
 
-	// Handle connections.
+	// TODO: Remove extra vertices.
+
+	for (auto& v : acycle.vertices) {
+		for (auto& e : v.edge_list) {
+			// If e.end \not\in acycle.vertices,
+			// erase(e).
+		}
+	}
 
 	return acycle;
 }
