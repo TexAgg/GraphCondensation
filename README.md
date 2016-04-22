@@ -36,6 +36,8 @@ $ cd _build
 $ cmake ..\cmakelists.txt
 ```
 The build files will be in the `_build` folder.
+If you are using Visual Studio, this will essentially just clone the folder in the `_build` folder as well as add some other files,
+which is essentially useless, but makes me feel cool.
 
 ---
 

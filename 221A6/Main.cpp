@@ -21,7 +21,7 @@ int main(int argc, char ** argv) {
 		return 1;
 	}
 	
-	cout << "The file input was " << argv[1] << "." << endl;
+	cout << "The file input was " << argv[1] << ".\n" << endl;
 	matt::Graph graph(argv[1]);
 	cout << "Here is the first graph:" << endl;
 	graph.display_graph();
