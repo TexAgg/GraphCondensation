@@ -229,8 +229,13 @@ Graph Graph::get_acyclic() {
 
 	// https://bitbucket.org/gaikema/csce221-a6/src/45cf9e882d1043d50426be136f5fdf9950509077/221A6/Graph.cpp?at=acyclic&fileviewer=file-view-default
 	for (auto& v : acycle.vertices) {
-		for (auto e = v.edge_list.begin(); e != v.edge_list.end();) {
-
+		for (auto& e = v.edge_list.begin(); e != v.edge_list.end();) {
+			if (!contains(acycle.vertices, e->end)) {
+				e = v.edge_list.erase(e);
+			}
+			else {
+				e++;
+			}
 		}
 	}
 
