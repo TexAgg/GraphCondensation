@@ -220,14 +220,6 @@ Graph Graph::get_acyclic() {
 		referencing any strongly-connected elements.
 	*/
 
-	// Map transpose vertices to regular vertices.
-	/*
-	std::map<Vertex, Vertex> mr_map;
-	for (int i = 0; i < t.vertices.size(); i++) {
-		mr_map.insert(t.vertices[i], vertices[i]);
-	}
-	*/
-
 	Graph acycle;
 	for (auto k : t.scc) {
 		acycle.insert(vertices[k.first.label-1]);
