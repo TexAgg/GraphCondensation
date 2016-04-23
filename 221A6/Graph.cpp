@@ -221,10 +221,10 @@ Graph Graph::get_acyclic() {
 		referencing any strongly-connected elements.
 	*/
 
-	std::map<Vertex, std::list<Vertex>> temp_scc = t.scc;
+	std::map<Vertex, std::list<Vertex>> temp_scc_t = t.scc;
 
 	//for (std::map<Vertex, std::list<Vertex>>::iterator rep = temp_scc.begin(); rep != temp_scc.end(); rep++) {
-	for (std::pair<Vertex, std::list<Vertex>> rep : temp_scc) {
+	for (std::pair<Vertex, std::list<Vertex>> rep : temp_scc_t) {
 		for (Vertex mem : rep.second) {
 			for (std::list<Edge>::iterator e = mem.edge_list.begin(); e != mem.edge_list.end(); e++) {
 				rep.first.edge_list.push_back(*e);
@@ -233,9 +233,20 @@ Graph Graph::get_acyclic() {
 		acycle.insert(rep.first);
 	}
 
+	std::vector<Vertex> temp_vertices;// = vertices;
+	for (std::pair<Vertex, std::list<Vertex>> rep : temp_scc_t) {
+		//temp_vertices.push_back(vertices[rep.first.label - 1]);
+		Vertex temp_new_vertex = vertices[rep.first.label-1];
+		for (Vertex mem : rep.second) {
+			for (std::list<Edge>::iterator e = vertices[mem.label-1].edge_list.begin(); e != vertices[mem.label-1].edge_list.end(); e++) {
+				temp_new_vertex.edge_list.push_back(*e);
+			}
+		}
+		temp_vertices.push_back(temp_new_vertex);
+	}
 	
-	for (auto k : temp_scc) {
-		//acycle.insert(vertices[k.first.label-1]);
+	for (auto k : temp_scc_t) {
+		acycle.insert(vertices[k.first.label-1]);
 		//acycle.insert(k.first);
 	}
 
@@ -251,7 +262,7 @@ Graph Graph::get_acyclic() {
 			}
 		}
 	}
-
+	acycle.vertices = temp_vertices;
 	return acycle;
 }
 
