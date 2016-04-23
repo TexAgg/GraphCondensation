@@ -226,9 +226,16 @@ Graph Graph::get_acyclic() {
 
 	}
 
+	for (std::pair<Vertex, std::list<Vertex>> rep : temp_scc) {
+		for (Vertex mem : rep.second) {
+
+		}
+	}
+
 	Graph acycle;
 	for (auto k : temp_scc) {
-		acycle.insert(vertices[k.first.label-1]);
+		//acycle.insert(vertices[k.first.label-1]);
+		acycle.insert(k.first);
 	}
 
 	// https://bitbucket.org/gaikema/csce221-a6/src/45cf9e882d1043d50426be136f5fdf9950509077/221A6/Graph.cpp?at=acyclic&fileviewer=file-view-default
