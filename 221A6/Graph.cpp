@@ -225,8 +225,6 @@ Graph Graph::get_acyclic() {
 		acycle.insert(vertices[k.first.label-1]);
 	}
 
-	// TODO: Remove extra vertices.
-
 	// https://bitbucket.org/gaikema/csce221-a6/src/45cf9e882d1043d50426be136f5fdf9950509077/221A6/Graph.cpp?at=acyclic&fileviewer=file-view-default
 	for (auto& v : acycle.vertices) {
 		for (auto& e = v.edge_list.begin(); e != v.edge_list.end();) {
