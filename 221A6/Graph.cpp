@@ -207,7 +207,8 @@ void Graph::display_dfs(int start, std::ostream& os) {
 
 /**
 	@return The acyclic component of the Graph.
-	Very bad code.
+	Very bad code. It can certainly be cleaned
+	up and optimized but I am too afraid to touch it.
 */
 Graph Graph::get_acyclic() {
 	// Make sure the SCCs are up-to-date.
@@ -309,21 +310,5 @@ void Graph::insert(Vertex vertex) {
 	vertices.push_back(vertex);
 	reorder();
 }
-
-/**
-Checks to see if a Vertex of a given label
-is in a vector of vertices.
-*/
-/*
-bool contains(std::vector<Vertex> vector, int end) {
-	//bool flag = false;
-
-	for (auto v : vector) {
-		if (v.label == end)
-			return true;
-	}
-	return false;
-}
-*/
 
 } // End matt namespace
