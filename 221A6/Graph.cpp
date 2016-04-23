@@ -235,7 +235,7 @@ Graph Graph::get_acyclic() {
 		acycle.insert(rep.first);
 	}
 
-	std::vector<Vertex> temp_vertices;// = vertices;
+	std::vector<Vertex> temp_vertices;
 	for (std::pair<Vertex, std::list<Vertex>> rep : temp_scc_t) {
 		//temp_vertices.push_back(vertices[rep.first.label - 1]);
 		Vertex temp_new_vertex = vertices[rep.first.label-1];
@@ -252,12 +252,11 @@ Graph Graph::get_acyclic() {
 		//acycle.insert(k.first);
 	}
 
-	// https://bitbucket.org/gaikema/csce221-a6/src/45cf9e882d1043d50426be136f5fdf9950509077/221A6/Graph.cpp?at=acyclic&fileviewer=file-view-default
+	// Remove extra elements
 	for (auto& v : temp_vertices) {
 		for (auto& e = v.edge_list.begin(); e != v.edge_list.end();) {
 			if (!contains(temp_vertices, e->end) || e->end == v.label) {
 				e = v.edge_list.erase(e);
-				//e++;
 			}
 			else {
 				e++;

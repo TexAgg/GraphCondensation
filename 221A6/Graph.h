@@ -33,7 +33,9 @@ class Graph {
 	void depth_first_search(int start = 0);
 	void reorder();
 
+	// The Vertices.
 	std::vector<Vertex> vertices;
+	// The strongly connected components.
 	std::map<Vertex, std::list<Vertex>> scc;
 
 public:
