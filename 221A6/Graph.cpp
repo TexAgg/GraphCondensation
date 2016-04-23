@@ -220,8 +220,14 @@ Graph Graph::get_acyclic() {
 		referencing any strongly-connected elements.
 	*/
 
+	std::map<Vertex, std::list<Vertex>> temp_scc = t.scc;
+
+	for (std::pair<Vertex, std::list<Vertex>> main_vertex : temp_scc) {
+
+	}
+
 	Graph acycle;
-	for (auto k : t.scc) {
+	for (auto k : temp_scc) {
 		acycle.insert(vertices[k.first.label-1]);
 	}
 

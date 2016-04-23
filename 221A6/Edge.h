@@ -8,6 +8,7 @@
 #define EDGE_H
 
 #include <iostream>
+#include <list>
 
 namespace matt {
 
@@ -37,6 +38,9 @@ public:
 	void operator=(const Edge& edge);
 
 	friend std::ostream& operator<<(std::ostream& os, Edge& edge);
+	friend bool contains(std::list<Edge> vector, Edge end);
+	friend bool contains(std::list<Edge> vector, int end);
+	friend bool operator==(Edge lhs, Edge rhs);
 	friend class Vertex;
 	friend class Graph;
 };

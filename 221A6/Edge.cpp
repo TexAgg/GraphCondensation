@@ -56,4 +56,24 @@ std::ostream& operator<<(std::ostream& os, Edge& edge) {
 	return os;
 }
 
+bool contains(std::list<Edge> vector, Edge end) {
+	for (auto v : vector) {
+		if (end == v)
+			return true;
+	}
+	return false;
+}
+
+bool contains(std::list<Edge> vector, int end) {
+	for (auto v : vector) {
+		if (v.end == end)
+			return true;
+	}
+	return false;
+}
+
+bool operator==(Edge lhs, Edge rhs) {
+	return lhs.start == rhs.start && lhs.end == rhs.end && lhs.weight == rhs.weight;
+}
+
 } // End matt namespace
