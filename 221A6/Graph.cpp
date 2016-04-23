@@ -213,6 +213,7 @@ Graph Graph::get_acyclic() {
 	depth_first_search();
 	Graph t = transpose();
 	t.depth_first_search();
+	Graph acycle;
 
 	/*
 		Make a new graph with the keys of scc.
@@ -222,20 +223,20 @@ Graph Graph::get_acyclic() {
 
 	std::map<Vertex, std::list<Vertex>> temp_scc = t.scc;
 
-	for (std::pair<Vertex, std::list<Vertex>> main_vertex : temp_scc) {
-
-	}
-
+	//for (std::map<Vertex, std::list<Vertex>>::iterator rep = temp_scc.begin(); rep != temp_scc.end(); rep++) {
 	for (std::pair<Vertex, std::list<Vertex>> rep : temp_scc) {
 		for (Vertex mem : rep.second) {
-
+			for (std::list<Edge>::iterator e = mem.edge_list.begin(); e != mem.edge_list.end(); e++) {
+				rep.first.edge_list.push_back(*e);
+			}
 		}
+		acycle.insert(rep.first);
 	}
 
-	Graph acycle;
+	
 	for (auto k : temp_scc) {
 		//acycle.insert(vertices[k.first.label-1]);
-		acycle.insert(k.first);
+		//acycle.insert(k.first);
 	}
 
 	// https://bitbucket.org/gaikema/csce221-a6/src/45cf9e882d1043d50426be136f5fdf9950509077/221A6/Graph.cpp?at=acyclic&fileviewer=file-view-default
@@ -243,6 +244,7 @@ Graph Graph::get_acyclic() {
 		for (auto& e = v.edge_list.begin(); e != v.edge_list.end();) {
 			if (!contains(acycle.vertices, e->end)) {
 				e = v.edge_list.erase(e);
+				//e++;
 			}
 			else {
 				e++;
