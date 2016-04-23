@@ -207,6 +207,7 @@ void Graph::display_dfs(int start, std::ostream& os) {
 
 /**
 	@return The acyclic component of the Graph.
+	Very bad code.
 */
 Graph Graph::get_acyclic() {
 	// Make sure the SCCs are up-to-date.
@@ -251,9 +252,9 @@ Graph Graph::get_acyclic() {
 	}
 
 	// https://bitbucket.org/gaikema/csce221-a6/src/45cf9e882d1043d50426be136f5fdf9950509077/221A6/Graph.cpp?at=acyclic&fileviewer=file-view-default
-	for (auto& v : acycle.vertices) {
+	for (auto& v : temp_vertices) {
 		for (auto& e = v.edge_list.begin(); e != v.edge_list.end();) {
-			if (!contains(acycle.vertices, e->end)) {
+			if (!contains(temp_vertices, e->end) || e->end == v.label) {
 				e = v.edge_list.erase(e);
 				//e++;
 			}
