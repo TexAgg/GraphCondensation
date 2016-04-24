@@ -258,7 +258,7 @@ Graph Graph::get_acyclic() {
 
 	// Remove repeated Edges.
 	for (auto& v : temp_vertices) {
-		for (auto& e = v.edge_list.begin(); e != v.edge_list.end();) {
+		for (auto e = v.edge_list.begin(); e != v.edge_list.end();) {
 			if (!contains(temp_vertices, e->end) || e->end == v.label) {
 				e = v.edge_list.erase(e);
 			}
