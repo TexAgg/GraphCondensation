@@ -68,8 +68,8 @@ std::ostream& operator<<(std::ostream& os, const Vertex& vertex) {
 }
 
 /**
-Checks to see if a Vertex of a given label
-is in a vector of vertices.
+	Checks to see if a Vertex of a given label
+	is in a vector of vertices.
 */
 bool contains(std::vector<Vertex> vector, int end) {
 	//bool flag = false;
