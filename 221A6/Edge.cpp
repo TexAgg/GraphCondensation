@@ -23,6 +23,9 @@ weight(weight) {
 
 }
 
+/**
+	Copy constructor for an Edge.
+*/
 Edge::Edge(const Edge& edge): 
 start(edge.start),
 end(edge.end),
@@ -56,6 +59,12 @@ std::ostream& operator<<(std::ostream& os, Edge& edge) {
 	return os;
 }
 
+/**
+	Check if a list of Edges contains a certain Edge.
+	@param vector A list of edges. Ignore the misleading
+	variable name.
+	@param end The Edge to check for.
+*/
 bool contains(std::list<Edge> vector, Edge end) {
 	for (auto v : vector) {
 		if (end == v)
@@ -64,6 +73,12 @@ bool contains(std::list<Edge> vector, Edge end) {
 	return false;
 }
 
+/**
+Check if a list of Edges contains a certain Edge.
+@param vector A list of edges. Ignore the misleading
+variable name.
+@param end The endpoint of the Edge to check for.
+*/
 bool contains(std::list<Edge> vector, int end) {
 	for (auto v : vector) {
 		if (v.end == end)

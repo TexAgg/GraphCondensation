@@ -18,6 +18,10 @@ Vertex::Vertex(int l) : label(l) {
 
 }
 
+/**
+	The default constructor assigns
+	the value of the label to 0.
+*/
 Vertex::Vertex() : label(0) {
 
 }

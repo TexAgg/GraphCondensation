@@ -29,9 +29,13 @@ void Graph::insert(Vertex vertex, int end) {
 	reorder();
 }
 
+/**
+	Supposed to create a Graph
+	with size vertices.
+	It does nothing.
+*/
 Graph::Graph(int size) {
-	//vertices.resize(size);
-	// idk
+
 }
 
 /**
@@ -99,8 +103,13 @@ const int Graph::size() {
 	return vertices.size();
 }
 
+/**
+	We were told to implement this function,
+	but were never told what it is supposed to do,
+	so it does nothing.
+*/
 void Graph::build_graph() {
-	// idk
+	
 }
 
 /**
@@ -129,11 +138,11 @@ Graph Graph::transpose() {
 	Graph new_graph = Graph(*this);
 
 	// Empty the edge list for each Vertex
-	// in the new Graph
+	// in the new Graph.
 	for (auto& v : new_graph.vertices) {
 		v.edge_list.clear();
 	}
-	// Populate edge lists
+	// Populate edge lists.
 	for (int i = 0; i < vertices.size(); i++) {
 		for (auto e : vertices[i].edge_list) {
 			new_graph.vertices[e.end-1].connect_to(i+1);
@@ -209,6 +218,7 @@ void Graph::display_dfs(int start, std::ostream& os) {
 	@return The acyclic component of the Graph.
 	Very bad code. It can certainly be cleaned
 	up and optimized but I am too afraid to touch it.
+	I think that a good chunk of it is useless.
 */
 Graph Graph::get_acyclic() {
 	// Make sure the SCCs are up-to-date.
@@ -216,16 +226,9 @@ Graph Graph::get_acyclic() {
 	Graph t = transpose();
 	t.depth_first_search();
 	Graph acycle;
-
-	/*
-		Make a new graph with the keys of scc.
-		Keep the same edge lists, but remove any edges
-		referencing any strongly-connected elements.
-	*/
-
 	std::map<Vertex, std::list<Vertex>> temp_scc_t = t.scc;
 
-	//for (std::map<Vertex, std::list<Vertex>>::iterator rep = temp_scc.begin(); rep != temp_scc.end(); rep++) {
+	// I think this loop is useless, but I'm too scared to delete it.
 	for (std::pair<Vertex, std::list<Vertex>> rep : temp_scc_t) {
 		for (Vertex mem : rep.second) {
 			for (std::list<Edge>::iterator e = mem.edge_list.begin(); e != mem.edge_list.end(); e++) {
@@ -235,9 +238,10 @@ Graph Graph::get_acyclic() {
 		acycle.insert(rep.first);
 	}
 
+	// Add edges of strongly connected components 
+	// the edge list of the representative Vertex.
 	std::vector<Vertex> temp_vertices;
 	for (std::pair<Vertex, std::list<Vertex>> rep : temp_scc_t) {
-		//temp_vertices.push_back(vertices[rep.first.label - 1]);
 		Vertex temp_new_vertex = vertices[rep.first.label-1];
 		for (Vertex mem : rep.second) {
 			for (std::list<Edge>::iterator e = vertices[mem.label-1].edge_list.begin(); e != vertices[mem.label-1].edge_list.end(); e++) {
@@ -247,12 +251,12 @@ Graph Graph::get_acyclic() {
 		temp_vertices.push_back(temp_new_vertex);
 	}
 	
+	// This loop might also be useless.
 	for (auto k : temp_scc_t) {
 		acycle.insert(vertices[k.first.label-1]);
-		//acycle.insert(k.first);
 	}
 
-	// Remove extra elements
+	// Remove repeated Edges.
 	for (auto& v : temp_vertices) {
 		for (auto& e = v.edge_list.begin(); e != v.edge_list.end();) {
 			if (!contains(temp_vertices, e->end) || e->end == v.label) {
