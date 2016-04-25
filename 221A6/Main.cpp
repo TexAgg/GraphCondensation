@@ -37,15 +37,13 @@ int main(int argc, char ** argv) {
 	graph2.display_graph();
 	*/
 
-	/*
 	cout << "\nNow we will display the results of a depth-first search:" << endl;
 	graph.display_dfs();
 	cout << "\n";
 	cout << "\nNow we will display the results of a depth-first search on the transpose:" << endl;
-	//graph_t.display_dfs(graph_t.size()*2);
-	graph_t.display_dfs();
+	graph_t.display_dfs(graph_t.size()*2);
+	//graph_t.display_dfs();
 	cout << "\n";
-	*/
 
 	cout << "\nNow I will show the strongly connected components:" << endl;
 	graph_t.print_scc();
