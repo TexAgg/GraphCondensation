@@ -64,5 +64,11 @@
     <Text Include="..\CMakeLists.txt">
       <Filter>Make</Filter>
     </Text>
+    <Text Include="graph2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="graph1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
