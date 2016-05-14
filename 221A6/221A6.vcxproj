@@ -102,6 +102,7 @@
     <None Include="..\.gitignore" />
     <None Include="..\README.md" />
     <None Include="ClassDiagram.cd" />
+    <None Include="Display.wl" />
     <None Include="Makefile" />
   </ItemGroup>
   <ItemGroup>

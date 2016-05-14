@@ -38,6 +38,7 @@
     <None Include="Makefile">
       <Filter>Make</Filter>
     </None>
+    <None Include="Display.wl" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Edge.h">
