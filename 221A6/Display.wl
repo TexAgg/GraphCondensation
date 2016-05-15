@@ -1,7 +1,9 @@
 (* ::Package:: *)
 
-(* Matt Gaikema
-5/14/2016 *)
+(* 
+Display.wl
+Matt Gaikema
+*)
 
 
 (* Clear variables. *)
@@ -26,3 +28,23 @@ g =Graph[%,VertexLabels->"Name"]
 
 (* The transpose of g. *)
 gt = ReverseGraph[g]
+
+
+(* Perform DFS on the graph and its transpose. *)
+DepthFirstScan[g]
+DepthFirstScan[gt,%[[1]]]
+
+
+(* Find the connected components of g. *)
+c = ConnectedComponents[g]
+
+
+(* https://www.wolfram.com/mathematica/new-in-8/graph-and-network-analysis/topological-sorting.html *)
+edges = Union[
+   Cases[EdgeList[g] /. 
+     Table[v -> First[Select[c, MemberQ[#, v] &]], {v, 
+       VertexList[g]}], u_ \[DirectedEdge] v_ /; u =!= v]];
+cond = Graph[c, edges, VertexLabels->"Name"]
+
+
+(* http://mathematica.stackexchange.com/questions/33638/remove-redundant-dependencies-from-a-directed-acyclic-graph *)
