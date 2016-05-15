@@ -1,13 +1,19 @@
 # CSCE 221 A6
+Find the acyclic component graph, or condensation graph, 
+of a graph, implemented in C++ as well as in Mathematica.
+
+I originally did in in C++ for an assignment, 
+and decided to try it in Mathematica for fun.
+
+---
+# Assignment
 Assignment [here](https://www.dropbox.com/s/vfoyy1ye5c5xkyi/221-16a-A6.pdf?dl=0), 
 and supplementary files [here](https://www.dropbox.com/sh/rcykbptpvj9og7n/AADdbkxw-lxc0gcjXpwOeh90a?dl=0).
 
 Due April 21.
 
----
-# Assignment
 The assignment is to make a graph data structure.
-Using the graph, we are supposed to find the strongly connecte components using
+Using the graph, we are supposed to find the strongly connected components using
 depth-first search on the graph and on the transpose.
 
 I have done it in C++ and also in Mathematica.
