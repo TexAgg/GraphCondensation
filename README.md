@@ -10,9 +10,14 @@ The assignment is to make a graph data structure.
 Using the graph, we are supposed to find the strongly connecte components using
 depth-first search on the graph and on the transpose.
 
+I have done it in C++ and also in Mathematica.
+
 ---
 
 # Instructions
+
+## Mathematica
+Enter the text file in Display.wl and run the package.
 
 ## Windows
 Open the [.sln](https://bitbucket.org/gaikema/csce221-a6/src/983578edd3dae28726b37fc0e60ca098925fafb4/221A6.sln?at=master&fileviewer=file-view-default) file in Visual Studio.

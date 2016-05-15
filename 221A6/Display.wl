@@ -1,8 +1,10 @@
 (* ::Package:: *)
 
 (* 
-Display.wl
-Matt Gaikema
+	Display.wl
+	Matt Gaikema
+	Displays a graph, its transpose,
+	and its directed acyclic components.
 *)
 
 
