@@ -71,5 +71,6 @@
     <Text Include="graph1.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="repos.txt" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,2 @@
+https://bitbucket.org/gaikema/csce221-a6
+https://github.com/TexAgg/GraphCondensation

@@ -114,6 +114,7 @@
     <Text Include="..\CMakeLists.txt" />
     <Text Include="graph1.txt" />
     <Text Include="graph2.txt" />
+    <Text Include="repos.txt" />
     <Text Include="test1.txt">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </ExcludedFromBuild>
