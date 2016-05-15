@@ -1,11 +1,31 @@
 (* ::Package:: *)
 
+(* ::Title:: *)
+(*Graph Condensation*)
+
+
+(* ::Subtitle:: *)
+(*Matt Gaikema*)
+(*May 2016*)
+
+
+(* ::Section:: *)
+(*Information*)
+
+
+(* ::Text:: *)
+(*Display a graph, its transpose, and its directed acyclic component.*)
+
+
 (* 
 	Display.wl
-	Matt Gaikema
 	Displays a graph, its transpose,
 	and its directed acyclic components.
 *)
+
+
+(* ::Section:: *)
+(*Setup Code*)
 
 
 (* Clear variables. *)
@@ -16,6 +36,10 @@ SetOptions[EvaluationNotebook[], CellContext -> Notebook]
 SetDirectory[NotebookDirectory[]]
 
 
+(* ::Section:: *)
+(*File Parsing*)
+
+
 (* Import the file. *)
 Import["test1.txt","Table"];
 (* Remove the deliminating -1 at the end of each line. *)
@@ -24,17 +48,28 @@ input = Drop[#,-1]&/@%;
 Flatten[Thread[#1 -> {##2}] & @@@ input];
 
 
+(* ::Section:: *)
+(*Graphs*)
+
+
+(* ::Subsection:: *)
+(*Original Graph*)
+
+
 (* The original graph. *)
 g =Graph[%,VertexLabels->"Name"]
+
+
+(* ::Subsection:: *)
+(*Transpose*)
 
 
 (* The transpose of g. *)
 gt = ReverseGraph[g]
 
 
-(* Perform DFS on the graph and its transpose. *)
-DepthFirstScan[g]
-DepthFirstScan[gt,%[[1]]]
+(* ::Subsection:: *)
+(*Condensation*)
 
 
 (* Find the connected components of g. *)
@@ -46,7 +81,5 @@ edges = Union[
    Cases[EdgeList[g] /. 
      Table[v -> First[Select[c, MemberQ[#, v] &]], {v, 
        VertexList[g]}], u_ \[DirectedEdge] v_ /; u =!= v]];
+(* Condensation graph. *)
 cond = Graph[c, edges, VertexLabels->"Name"]
-
-
-(* http://mathematica.stackexchange.com/questions/33638/remove-redundant-dependencies-from-a-directed-acyclic-graph *)
